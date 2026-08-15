@@ -22,7 +22,7 @@
           }
           
     .lang-name {
-      font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #a0aec0;
+      font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e4e4e7;
     }
     .stagger {
       opacity: 0;
