@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Animated Typing Header -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00F2FE&center=true&vcenter=true&width=950&height=70&lines=Hi%2C+I'm+LatencySlayerX+(Akgithub2028);Quant+Trading+%7C+Market+Microstructure;Low-Latency+C%2B%2B+%7C+Multi-Agent+AI+Systems;Where+milliseconds+and+models+both+matter" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00F2FE&center=true&vcenter=true&width=950&height=70&lines=Hi%2C+I'm+Aayaann;Quant+Trading+%7C+Market+Microstructure;Low-Latency+C%2B%2B+%7C+Multi-Agent+AI+Systems;Where+milliseconds+and+models+both+matter" alt="Typing SVG" />
 
 <p align="center">
   <b>Quant Systems Engineer · Low-Latency C++ · Autonomous AI Agents</b>
@@ -40,19 +40,65 @@ I build **low-latency market-making and execution systems** in C++ and Python, a
 
 ## 🛠 Tech Stack
 
-<div align="center">
+<table>
+<tr>
+<td valign="top" width="50%">
 
-<img src="https://img.shields.io/badge/C++20%2F23-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" />
-<img src="https://img.shields.io/badge/Python_3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
-<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-<img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" />
+**⚡ Quant & Low-Latency Systems**
+<br/>
+<img src="https://img.shields.io/badge/C++20%2F23-00599C?style=flat-square&logo=cplusplus&logoColor=white" />
+<img src="https://img.shields.io/badge/Python_3.12-3776AB?style=flat-square&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/WebSocket-010101?style=flat-square&logo=websocket&logoColor=white" />
+<img src="https://img.shields.io/badge/Lock--Free_Structures-1a1b26?style=flat-square" />
+<br/>
+<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" />
+<img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" />
+<img src="https://img.shields.io/badge/CVXPY-1a1b26?style=flat-square" />
+<br/>
+<sub>Real-time market data ingestion, lock-free order-book structures, and convex portfolio optimization.</sub>
 
-</div>
+</td>
+<td valign="top" width="50%">
+
+**🤖 Agentic AI & ML**
+<br/>
+<img src="https://img.shields.io/badge/LangGraph-1a1b26?style=flat-square" />
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
+<img src="https://img.shields.io/badge/ChromaDB-1a1b26?style=flat-square" />
+<img src="https://img.shields.io/badge/asyncio-3776AB?style=flat-square&logo=python&logoColor=white" />
+<br/>
+<sub>Hierarchical multi-agent orchestration, RAG pipelines with vector memory, and self-reflective critic loops.</sub>
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="50%">
+
+**🧩 Backend & Infra**
+<br/>
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/OpenTelemetry-425CC7?style=flat-square&logo=opentelemetry&logoColor=white" />
+<br/>
+<sub>Multi-tenant service architecture with observability, caching, and containerized deployment.</sub>
+
+</td>
+<td valign="top" width="50%">
+
+**🧪 Tooling & Research**
+<br/>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" />
+<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
+<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
+<br/>
+<sub>Reproducible research notebooks, typed front-end tooling, and CI-driven asset generation.</sub>
+
+</td>
+</tr>
+</table>
 
 ---
 
