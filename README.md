@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Animated Typing Header -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=00F2FE&center=true&vcenter=true&width=800&height=65&lines=Hi+%F0%9F%91%8B+I'm+LatencySlayerX+(Akgithub2028);Quantitative+Trading+%7C+Market+Microstructure+%7C+Low-Latency+C%2B%2B;Autonomous+Multi-Agent+AI+Systems+%7C+LangGraph+%7C+RAG;Building+systems+where+milliseconds+and+models+matter" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00F2FE&center=true&vcenter=true&width=950&height=70&lines=Hi%2C+I'm+LatencySlayerX+(Akgithub2028);Quant+Trading+%7C+Market+Microstructure;Low-Latency+C%2B%2B+%7C+Multi-Agent+AI+Systems;Where+milliseconds+and+models+both+matter" alt="Typing SVG" />
 
 <p align="center">
   <b>Quant Systems Engineer · Low-Latency C++ · Autonomous AI Agents</b>
@@ -65,9 +65,11 @@ I build **low-latency market-making and execution systems** in C++ and Python, a
 <td width="50%" valign="top">
 
 **[AlphaStack — Multi-Alpha Convex Optimization Engine](https://github.com/Akgithub2028/Multi-Alpha-Engineering-Convex-Optimization-Engine)**
+
+<img src="https://img.shields.io/badge/Quant_Research-1a1b26?style=flat-square" /> <img src="https://img.shields.io/badge/Convex_Optimization-1a1b26?style=flat-square" />
 <br/>
-<img src="https://img.shields.io/github/languages/top/Akgithub2028/Multi-Alpha-Engineering-Convex-Optimization-Engine?style=flat-square&color=00f2fe&labelColor=0a0b10" />
-<img src="https://img.shields.io/github/stars/Akgithub2028/Multi-Alpha-Engineering-Convex-Optimization-Engine?style=flat-square&color=7F00FF&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/languages/top/Akgithub2028/Multi-Alpha-Engineering-Convex-Optimization-Engine?style=flat-square&logo=jupyter&logoColor=white&color=00f2fe&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/stars/Akgithub2028/Multi-Alpha-Engineering-Convex-Optimization-Engine?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
 
 Research framework to discover, combine, and convex-optimize multi-alpha signals into market-resilient portfolios.
 
@@ -75,9 +77,11 @@ Research framework to discover, combine, and convex-optimize multi-alpha signals
 <td width="50%" valign="top">
 
 **[ApexFlow](https://github.com/Akgithub2028/ApexFlow)**
+
+<img src="https://img.shields.io/badge/Market_Making-1a1b26?style=flat-square" /> <img src="https://img.shields.io/badge/Crypto_ETP-1a1b26?style=flat-square" />
 <br/>
-<img src="https://img.shields.io/github/languages/top/Akgithub2028/ApexFlow?style=flat-square&color=00f2fe&labelColor=0a0b10" />
-<img src="https://img.shields.io/github/stars/Akgithub2028/ApexFlow?style=flat-square&color=7F00FF&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/languages/top/Akgithub2028/ApexFlow?style=flat-square&logo=python&logoColor=white&color=00f2fe&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/stars/Akgithub2028/ApexFlow?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
 
 Low-latency crypto ETP market-making and cross-exchange execution research platform.
 
@@ -87,9 +91,11 @@ Low-latency crypto ETP market-making and cross-exchange execution research platf
 <td width="50%" valign="top">
 
 **[VenueWatch](https://github.com/Akgithub2028/VenueWatch)**
+
+<img src="https://img.shields.io/badge/Market_Microstructure-1a1b26?style=flat-square" /> <img src="https://img.shields.io/badge/Multi_Venue-1a1b26?style=flat-square" />
 <br/>
-<img src="https://img.shields.io/github/languages/top/Akgithub2028/VenueWatch?style=flat-square&color=00f2fe&labelColor=0a0b10" />
-<img src="https://img.shields.io/github/stars/Akgithub2028/VenueWatch?style=flat-square&color=7F00FF&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/languages/top/Akgithub2028/VenueWatch?style=flat-square&logo=python&logoColor=white&color=00f2fe&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/stars/Akgithub2028/VenueWatch?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
 
 Normalizes, measures, and statistically validates real-time order-book liquidity, execution slippage, and infrastructure reliability across Binance, Coinbase, Kraken, and OKX.
 
@@ -97,9 +103,11 @@ Normalizes, measures, and statistically validates real-time order-book liquidity
 <td width="50%" valign="top">
 
 **[IMC Prosperity 4 Backtester](https://github.com/Akgithub2028/IMC-Prosperity-4-Backtester)**
+
+<img src="https://img.shields.io/badge/Backtesting-1a1b26?style=flat-square" /> <img src="https://img.shields.io/badge/PnL_Analytics-1a1b26?style=flat-square" />
 <br/>
-<img src="https://img.shields.io/github/languages/top/Akgithub2028/IMC-Prosperity-4-Backtester?style=flat-square&color=00f2fe&labelColor=0a0b10" />
-<img src="https://img.shields.io/github/stars/Akgithub2028/IMC-Prosperity-4-Backtester?style=flat-square&color=7F00FF&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/languages/top/Akgithub2028/IMC-Prosperity-4-Backtester?style=flat-square&logo=python&logoColor=white&color=00f2fe&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/stars/Akgithub2028/IMC-Prosperity-4-Backtester?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
 
 Pure-Python backtesting engine with built-in PnL charts, drawdown analysis, Sharpe/Calmar metrics, and Colab support. Clone → overwrite trader → run.
 
@@ -114,9 +122,11 @@ Pure-Python backtesting engine with built-in PnL charts, drawdown analysis, Shar
 <td width="50%" valign="top">
 
 **[Autonomous AI Co-Scientist](https://github.com/Akgithub2028/Autonomous-AI-Co-Scientist)**
+
+<img src="https://img.shields.io/badge/Multi_Agent-1a1b26?style=flat-square" /> <img src="https://img.shields.io/badge/RAG-1a1b26?style=flat-square" />
 <br/>
-<img src="https://img.shields.io/github/languages/top/Akgithub2028/Autonomous-AI-Co-Scientist?style=flat-square&color=00f2fe&labelColor=0a0b10" />
-<img src="https://img.shields.io/github/stars/Akgithub2028/Autonomous-AI-Co-Scientist?style=flat-square&color=7F00FF&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/languages/top/Akgithub2028/Autonomous-AI-Co-Scientist?style=flat-square&logo=python&logoColor=white&color=00f2fe&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/stars/Akgithub2028/Autonomous-AI-Co-Scientist?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
 
 Extends Google's AI Co-Scientist with modular multi-agent orchestration, retrieval-augmented reasoning, long-term memory, automated evaluation, benchmarking, and Docker deployment.
 
@@ -124,9 +134,11 @@ Extends Google's AI Co-Scientist with modular multi-agent orchestration, retriev
 <td width="50%" valign="top">
 
 **[VoRTeX](https://github.com/Akgithub2028/VoRTeX)**
+
+<img src="https://img.shields.io/badge/LLM_Orchestration-1a1b26?style=flat-square" /> <img src="https://img.shields.io/badge/Multi_Tenant_SaaS-1a1b26?style=flat-square" />
 <br/>
-<img src="https://img.shields.io/github/languages/top/Akgithub2028/VoRTeX?style=flat-square&color=00f2fe&labelColor=0a0b10" />
-<img src="https://img.shields.io/github/stars/Akgithub2028/VoRTeX?style=flat-square&color=7F00FF&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/languages/top/Akgithub2028/VoRTeX?style=flat-square&logo=python&logoColor=white&color=00f2fe&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/stars/Akgithub2028/VoRTeX?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
 
 Self-hostable AI execution engine in Python 3.12 with FastAPI, PostgreSQL 16, Redis 7, and OpenTelemetry — architected for multi-tenant SaaS LLM-workflow orchestration.
 
@@ -159,11 +171,13 @@ Self-hostable AI execution engine in Python 3.12 with FastAPI, PostgreSQL 16, Re
 
 <div align="center">
   <br />
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=Akgithub2028&show_icons=true&count_private=true&hide_border=true&theme=cyan&bg_color=0a0b10&title_color=00f2fe&icon_color=4facfe&text_color=a0aec0" alt="Akgithub2028 GitHub Stats" />
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Akgithub2028&layout=compact&hide_border=true&theme=cyan&bg_color=0a0b10&title_color=00f2fe&text_color=a0aec0" alt="Top Languages" />
+  <img height="180" src="./profile/stats.svg" alt="Akgithub2028 GitHub Stats" />
+  <img height="180" src="./profile/top-langs.svg" alt="Top Languages" />
   <br /><br />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Akgithub2028&hide_border=true&theme=cyan&background=0a0b10&ring=00f2fe&fire=ff007f&currStreakLabel=00f2fe" alt="Streak Stats" />
+  <img src="./profile/streak.svg" alt="Streak Stats" />
 </div>
+
+<sub><i>These cards are generated and committed by a GitHub Action every 24h — no third-party runtime dependency, so they won't go blank.</i></sub>
 
 ---
 
