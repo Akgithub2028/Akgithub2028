@@ -8,9 +8,13 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Status-Open_to_Quant_%2F_SWE_Roles-00f2fe?style=for-the-badge&labelColor=0a0b10" alt="Open to work" />
+</p>
+
+<p align="center">
   <a href="https://github.com/Akgithub2028"><img src="https://img.shields.io/github/followers/Akgithub2028?style=for-the-badge&color=00F2FE&logo=github&logoColor=white&labelColor=0a0b10" alt="Followers" /></a>
   <a href="https://github.com/Akgithub2028?tab=repositories"><img src="https://img.shields.io/badge/Repositories-View_All-7F00FF?style=for-the-badge&logo=git&logoColor=white&labelColor=0a0b10" alt="Repositories" /></a>
-  <a href="mailto:contact@latency-slayer.io"><img src="https://img.shields.io/badge/Email-Contact_Me-ff007f?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0a0b10" alt="Email" /></a>
+  <a href="https://akgithub2028.github.io/HomePage/"><img src="https://img.shields.io/badge/Portfolio-Live_Site-ff007f?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0a0b10" alt="Portfolio" /></a>
 </p>
 
 <br/>
@@ -234,8 +238,8 @@ Self-hostable AI execution engine in Python 3.12 with FastAPI, PostgreSQL 16, Re
     <img src="https://img.shields.io/badge/GitHub-Akgithub2028-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
   &nbsp;&nbsp;
-  <a href="mailto:contact@latency-slayer.io">
-    <img src="https://img.shields.io/badge/Email-LatencySlayerX-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  <a href="https://akgithub2028.github.io/HomePage/">
+    <img src="https://img.shields.io/badge/Portfolio-View_Site-D14836?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
 </div>
 
