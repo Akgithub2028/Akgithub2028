@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Animated Typing Header -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00F2FE&center=true&vcenter=true&width=950&height=70&lines=Hi%2C+I'm+Aayaann;Quant+Trading+%7C+Market+Microstructure;Low-Latency+C%2B%2B+%7C+Multi-Agent+AI+Systems;Where+milliseconds+and+models+both+matter" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00F2FE&center=true&vcenter=true&width=1000&height=70&lines=Hi%2C+I'm+Aayaann;Quantitative+Trader+%7C+Market+Microstructure+Research;2.14+Sharpe+Alpha+Model+%7C+9th+Globally%2C+Wunder+Fund+HFT;Low-Latency+C%2B%2B+%7C+Multi-Agent+AI+Systems" alt="Typing SVG" />
 
 <p align="center">
   <b>Quant Systems Engineer · Low-Latency C++ · Autonomous AI Agents</b>
@@ -9,12 +9,13 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Open_to_Quant_%2F_SWE_Roles-00f2fe?style=for-the-badge&labelColor=0a0b10" alt="Open to work" />
+  <img src="https://komarev.com/ghpvc/?username=Akgithub2028&style=for-the-badge&color=7F00FF&labelColor=0a0b10&label=Profile+Views" alt="Profile views" />
 </p>
 
 <p align="center">
   <a href="https://github.com/Akgithub2028"><img src="https://img.shields.io/github/followers/Akgithub2028?style=for-the-badge&color=00F2FE&logo=github&logoColor=white&labelColor=0a0b10" alt="Followers" /></a>
   <a href="https://github.com/Akgithub2028?tab=repositories"><img src="https://img.shields.io/badge/Repositories-View_All-7F00FF?style=for-the-badge&logo=git&logoColor=white&labelColor=0a0b10" alt="Repositories" /></a>
-  <a href="https://akgithub2028.github.io/HomePage/"><img src="https://img.shields.io/badge/Portfolio-Live_Site-ff007f?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0a0b10" alt="Portfolio" /></a>
+  <a href="https://akgithub2028.github.io/aayaann-kausar.github.io/"><img src="https://img.shields.io/badge/Portfolio-Live_Site-ff007f?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0a0b10" alt="Portfolio" /></a>
 </p>
 
 <br/>
@@ -59,7 +60,11 @@ I build **low-latency market-making and execution systems** in C++ and Python, a
 <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" />
 <img src="https://img.shields.io/badge/CVXPY-1a1b26?style=flat-square" />
 <br/>
-<sub>Real-time market data ingestion, lock-free order-book structures, and convex portfolio optimization.</sub>
+<img src="https://img.shields.io/badge/Hierarchical_Risk_Parity-1a1b26?style=flat-square" />
+<img src="https://img.shields.io/badge/CVaR_%2F_Ledoit--Wolf-1a1b26?style=flat-square" />
+<img src="https://img.shields.io/badge/Avellaneda--Stoikov-1a1b26?style=flat-square" />
+<br/>
+<sub>Real-time market data ingestion, lock-free order-book structures, convex portfolio optimization, and deflated/probabilistic Sharpe validation.</sub>
 
 </td>
 <td valign="top" width="50%">
@@ -238,7 +243,7 @@ Self-hostable AI execution engine in Python 3.12 with FastAPI, PostgreSQL 16, Re
     <img src="https://img.shields.io/badge/GitHub-Akgithub2028-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
   &nbsp;&nbsp;
-  <a href="https://akgithub2028.github.io/HomePage/">
+  <a href="https://akgithub2028.github.io/aayaann-kausar.github.io/">
     <img src="https://img.shields.io/badge/Portfolio-View_Site-D14836?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
 </div>
