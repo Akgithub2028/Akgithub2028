@@ -1,21 +1,23 @@
 <div align="center">
 
 <!-- Animated Typing Header -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00F2FE&center=true&vcenter=true&width=1000&height=70&lines=Hi%2C+I'm+Aayaann;Quantitative+Trader+%7C+Market+Microstructure+Research;2.14+Sharpe+Alpha+Model+%7C+9th+Globally%2C+Wunder+Fund+HFT;Low-Latency+C%2B%2B+%7C+Multi-Agent+AI+Systems" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00F2FE&center=true&vcenter=true&width=1000&height=70&lines=Hi%2C+I'm+Aayaann+Kausar;AI+Systems+%26+Agentic+Infrastructure+Engineer;Agentic+AI+Research+%26+Reliability+Engineering;High-Throughput+LLM+Serving+%7C+vLLM+%26+Post-Training;IIT+Kharagpur+%7C+Tool-Trust+Invariance+Lab" alt="Typing SVG" />
 
 <p align="center">
-  <b>Quant Systems Engineer · Low-Latency C++ · Autonomous AI Agents</b>
+  <b>AI Systems & Agentic Infrastructure Engineer · Agentic AI Research · Distributed Systems</b><br/>
+  <sub>B.Tech Student, Indian Institute of Technology (IIT) Kharagpur</sub>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Open_to_Quant_%2F_SWE_Roles-00f2fe?style=for-the-badge&labelColor=0a0b10" alt="Open to work" />
+  <img src="https://img.shields.io/badge/Status-Open_to_AI_Systems_%2F_Agentic_Infra_%2F_Research_Roles-00f2fe?style=for-the-badge&labelColor=0a0b10" alt="Open to work" />
   <img src="https://komarev.com/ghpvc/?username=Akgithub2028&style=for-the-badge&color=7F00FF&labelColor=0a0b10&label=Profile+Views" alt="Profile views" />
 </p>
 
 <p align="center">
   <a href="https://github.com/Akgithub2028"><img src="https://img.shields.io/github/followers/Akgithub2028?style=for-the-badge&color=00F2FE&logo=github&logoColor=white&labelColor=0a0b10" alt="Followers" /></a>
   <a href="https://github.com/Akgithub2028?tab=repositories"><img src="https://img.shields.io/badge/Repositories-View_All-7F00FF?style=for-the-badge&logo=git&logoColor=white&labelColor=0a0b10" alt="Repositories" /></a>
-  <a href="https://akgithub2028.github.io/aayaann-kausar.github.io/"><img src="https://img.shields.io/badge/Portfolio-Live_Site-ff007f?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0a0b10" alt="Portfolio" /></a>
+  <a href="https://linkedin.com/in/aayaann-kausar-8b2813344/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0a0b10" alt="LinkedIn" /></a>
+  <a href="https://akgithub2028.github.io/HomePage/"><img src="https://img.shields.io/badge/Portfolio-Interactive_HomePage-ff007f?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0a0b10" alt="Portfolio" /></a>
 </p>
 
 <br/>
@@ -35,75 +37,110 @@
 
 ## 🌌 About Me
 
-I build **low-latency market-making and execution systems** in C++ and Python, and **autonomous multi-agent AI platforms** that plan, retrieve, critique, and act on their own. My work sits at the intersection of quantitative microstructure research and production-grade agentic AI engineering.
+I specialize in **AI Systems Engineering, Agentic Infrastructure, and Autonomous AI Reliability**. My work focuses on bridging the gap between theoretical foundation models and resilient, production-grade agentic platforms: from **invariant tool-selection middleware** and **MCP runtime reliability layers** to **from-scratch vLLM inference engines** and **distributed cloud infrastructure (GCP / AWS / Kubernetes)**.
 
-- ⚡ **Quant Focus:** market microstructure, order-book dynamics, multi-alpha signal research, execution-cost analytics, backtesting & performance validation (Sharpe/Calmar, drawdown analysis).
-- 🤖 **AI Focus:** hierarchical multi-agent orchestration, retrieval-augmented reasoning (RAG), self-reflective critic loops, and LLM-workflow infrastructure.
-- 🧪 **Habits:** clean, documented, self-contained repos — every project ships with a working demo path, not just notebooks.
+- 🤖 **Agentic AI & Systems Research**: Formalizing protocol invariance, measuring selection fragility in LLM agents, and developing zero-cost pre-inference canonicalization middleware (author of the *Tool-Trust Invariance Lab* benchmark & research preprint).
+- 🛡️ **AI Reliability & Evaluation Engineering**: Architecting production reliability substrates for the Model Context Protocol (MCP), dynamic circuit breakers, adaptive streaming, fail-stop safety policies, and multi-turn agent evaluation harnesses.
+- ⚡ **Inference Systems & Post-Training**: Low-level LLM serving (PagedAttention, continuous dynamic batching, KV caching in custom CUDA/Python runtimes) and minimal post-training (SFT, DPO, GRPO, and DeepSeek-style reasoning distillation).
+- ☁️ **Distributed Cloud Infrastructure**: Production orchestration across **Google Cloud Platform (GCP)**, **Amazon Web Services (AWS)**, and **Kubernetes (K8s)** with containerized microservices, OpenTelemetry observability, and high-throughput Redis/PostgreSQL backbones.
 
 ---
 
-## 🛠 Tech Stack
+## 🛠 Enhanced Tech Stack & Systems Architecture
 
 <table>
 <tr>
 <td valign="top" width="50%">
 
-**⚡ Quant & Low-Latency Systems**
+### 🤖 Agentic AI & LLM Systems
+<br/>
+<img src="https://img.shields.io/badge/Model_Context_Protocol_(MCP)-0052CC?style=flat-square&logo=anthropic&logoColor=white" />
+<img src="https://img.shields.io/badge/LangGraph-1a1b26?style=flat-square&logo=langchain&logoColor=white" />
+<img src="https://img.shields.io/badge/CrewAI-FF4B4B?style=flat-square" />
+<img src="https://img.shields.io/badge/AutoGen-1a1b26?style=flat-square&logo=microsoft&logoColor=white" />
+<br/>
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
+<img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" />
+<img src="https://img.shields.io/badge/vLLM-00F2FE?style=flat-square&logoColor=black" />
+<img src="https://img.shields.io/badge/TensorRT--LLM-76B900?style=flat-square&logo=nvidia&logoColor=white" />
+<br/>
+<img src="https://img.shields.io/badge/LiteLLM-1a1b26?style=flat-square" />
+<img src="https://img.shields.io/badge/NVIDIA_NIM-76B900?style=flat-square&logo=nvidia&logoColor=white" />
+<img src="https://img.shields.io/badge/Groq_LPU-F55036?style=flat-square" />
+<br/>
+<img src="https://img.shields.io/badge/Qdrant-DC244C?style=flat-square&logo=qdrant&logoColor=white" />
+<img src="https://img.shields.io/badge/Milvus-00B4D8?style=flat-square" />
+<img src="https://img.shields.io/badge/ChromaDB-1a1b26?style=flat-square" />
+<br/>
+<sub>Autonomous multi-agent orchestration, typed tool schema contracts, PagedAttention, continuous batching, RAG vector memory, and self-reflective critic loops.</sub>
+
+</td>
+<td valign="top" width="50%">
+
+### ☁️ Cloud & Distributed Infrastructure
+<br/>
+<img src="https://img.shields.io/badge/Google_Cloud_(GCP)-4285F4?style=flat-square&logo=googlecloud&logoColor=white" />
+<img src="https://img.shields.io/badge/Vertex_AI-4285F4?style=flat-square&logo=googlecloud&logoColor=white" />
+<img src="https://img.shields.io/badge/GKE-4285F4?style=flat-square&logo=googlecloud&logoColor=white" />
+<img src="https://img.shields.io/badge/Cloud_Run-4285F4?style=flat-square&logo=googlecloud&logoColor=white" />
+<br/>
+<img src="https://img.shields.io/badge/Amazon_Web_Services_(AWS)-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" />
+<img src="https://img.shields.io/badge/AWS_Bedrock-FF9900?style=flat-square&logo=amazonwebservices&logoColor=black" />
+<img src="https://img.shields.io/badge/AWS_SageMaker-FF9900?style=flat-square&logo=amazonwebservices&logoColor=black" />
+<img src="https://img.shields.io/badge/AWS_EKS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" />
+<br/>
+<img src="https://img.shields.io/badge/Kubernetes_(K8s)-326CE5?style=flat-square&logo=kubernetes&logoColor=white" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/Helm-0F1689?style=flat-square&logo=helm&logoColor=white" />
+<img src="https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform&logoColor=white" />
+<br/>
+<img src="https://img.shields.io/badge/Redis_7-DC382D?style=flat-square&logo=redis&logoColor=white" />
+<img src="https://img.shields.io/badge/PostgreSQL_16-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white" />
+<br/>
+<sub>Production microservice autoscaling, multi-cloud LLM gateways, zero-leakage secret rotation, connection pooling, and distributed consensus.</sub>
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="50%">
+
+### 🛡️ AI Reliability, Post-Training & Eval
+<br/>
+<img src="https://img.shields.io/badge/Post--Training-SFT_%7C_DPO_%7C_GRPO-FF6B6B?style=flat-square" />
+<img src="https://img.shields.io/badge/Reasoning_Distillation-DeepSeek--R1_Style-00F2FE?style=flat-square" />
+<br/>
+<img src="https://img.shields.io/badge/Agent_Reliability-Circuit_Breakers-brightgreen?style=flat-square" />
+<img src="https://img.shields.io/badge/Protocol_Invariance-Schema_Gate-blue?style=flat-square" />
+<br/>
+<img src="https://img.shields.io/badge/AgentHarness-Deterministic_Eval-orange?style=flat-square" />
+<img src="https://img.shields.io/badge/OpenTelemetry-425CC7?style=flat-square&logo=opentelemetry&logoColor=white" />
+<img src="https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white" />
+<br/>
+<img src="https://img.shields.io/badge/Task--Clustered_Bootstrap-1000_Resamples-7F00FF?style=flat-square" />
+<img src="https://img.shields.io/badge/Prompt_Injection_Defense-red?style=flat-square" />
+<br/>
+<sub>Controlled perturbation engines, negative-control rejection gates, statistical bootstrap confidence bounds, and decision-level telemetry.</sub>
+
+</td>
+<td valign="top" width="50%">
+
+### ⚡ Core Systems Languages & Tooling
+<br/>
+<img src="https://img.shields.io/badge/Python_3.12-3776AB?style=flat-square&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/asyncio-1a1b26?style=flat-square&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/Pydantic_v2-E92063?style=flat-square&logo=pydantic&logoColor=white" />
 <br/>
 <img src="https://img.shields.io/badge/C++20%2F23-00599C?style=flat-square&logo=cplusplus&logoColor=white" />
-<img src="https://img.shields.io/badge/Python_3.12-3776AB?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/WebSocket-010101?style=flat-square&logo=websocket&logoColor=white" />
-<img src="https://img.shields.io/badge/Lock--Free_Structures-1a1b26?style=flat-square" />
+<img src="https://img.shields.io/badge/Lock--Free_Concurrency-1a1b26?style=flat-square" />
+<img src="https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white" />
 <br/>
-<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" />
-<img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" />
-<img src="https://img.shields.io/badge/CVXPY-1a1b26?style=flat-square" />
+<img src="https://img.shields.io/badge/LaTeX_%2F_BibTeX-arXiv_Publishing-008080?style=flat-square&logo=overleaf&logoColor=white" />
+<img src="https://img.shields.io/badge/GitHub_Actions-CI%2FCD-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
+<img src="https://img.shields.io/badge/Linux_Systems-FCC624?style=flat-square&logo=linux&logoColor=black" />
 <br/>
-<img src="https://img.shields.io/badge/Hierarchical_Risk_Parity-1a1b26?style=flat-square" />
-<img src="https://img.shields.io/badge/CVaR_%2F_Ledoit--Wolf-1a1b26?style=flat-square" />
-<img src="https://img.shields.io/badge/Avellaneda--Stoikov-1a1b26?style=flat-square" />
-<br/>
-<sub>Real-time market data ingestion, lock-free order-book structures, convex portfolio optimization, and deflated/probabilistic Sharpe validation.</sub>
-
-</td>
-<td valign="top" width="50%">
-
-**🤖 Agentic AI & ML**
-<br/>
-<img src="https://img.shields.io/badge/LangGraph-1a1b26?style=flat-square" />
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
-<img src="https://img.shields.io/badge/ChromaDB-1a1b26?style=flat-square" />
-<img src="https://img.shields.io/badge/asyncio-3776AB?style=flat-square&logo=python&logoColor=white" />
-<br/>
-<sub>Hierarchical multi-agent orchestration, RAG pipelines with vector memory, and self-reflective critic loops.</sub>
-
-</td>
-</tr>
-<tr>
-<td valign="top" width="50%">
-
-**🧩 Backend & Infra**
-<br/>
-<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
-<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
-<img src="https://img.shields.io/badge/OpenTelemetry-425CC7?style=flat-square&logo=opentelemetry&logoColor=white" />
-<br/>
-<sub>Multi-tenant service architecture with observability, caching, and containerized deployment.</sub>
-
-</td>
-<td valign="top" width="50%">
-
-**🧪 Tooling & Research**
-<br/>
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
-<img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" />
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
-<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
-<br/>
-<sub>Reproducible research notebooks, typed front-end tooling, and CI-driven asset generation.</sub>
+<sub>High-concurrency async services, strict schema validation, systems-level memory management, and automated reproduction suites.</sub>
 
 </td>
 </tr>
@@ -111,91 +148,118 @@ I build **low-latency market-making and execution systems** in C++ and Python, a
 
 ---
 
-## 🚀 Flagship Projects
+## 🚀 Featured AI Systems, Infrastructure & Research
 
-### 📈 Quantitative Trading & Market Research
+### 🔬 Flagship Agentic AI Research & Preprints
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-**[AlphaStack — Multi-Alpha Convex Optimization Engine](https://github.com/Akgithub2028/Multi-Alpha-Engineering-Convex-Optimization-Engine)**
-
-<img src="https://img.shields.io/badge/Quant_Research-1a1b26?style=flat-square" /> <img src="https://img.shields.io/badge/Convex_Optimization-1a1b26?style=flat-square" />
+### 🧪 [Tool-Trust Invariance Lab](https://github.com/Akgithub2028/Tool-Trust-Invariance-LAB)
+<img src="https://img.shields.io/badge/Agentic_AI_Research-Preprint-00F2FE?style=flat-square" /> <img src="https://img.shields.io/badge/Evaluation-480_Live_Trials-brightgreen?style=flat-square" /> <img src="https://img.shields.io/badge/arXiv-Ready_Package-red?style=flat-square" />
 <br/>
-<img src="https://img.shields.io/github/languages/top/Akgithub2028/Multi-Alpha-Engineering-Convex-Optimization-Engine?style=flat-square&logo=jupyter&logoColor=white&color=00f2fe&labelColor=0a0b10" />
-<img src="https://img.shields.io/github/stars/Akgithub2028/Multi-Alpha-Engineering-Convex-Optimization-Engine?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
+<img src="https://img.shields.io/github/languages/top/Akgithub2028/Tool-Trust-Invariance-LAB?style=flat-square&logo=python&logoColor=white&color=00f2fe&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/stars/Akgithub2028/Tool-Trust-Invariance-LAB?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
 
-Research framework to discover, combine, and convex-optimize multi-alpha signals into market-resilient portfolios.
+Formal empirical benchmark and publication paper evaluating whether frontier LLMs (*Llama-3.2-11b*, *GPT-OSS-20B*) select tools invariantly under semantics-preserving catalog transformations.
+- **Key Contributions**: Formulated Conditional Tool Selection Stability (CTSS = 96.3%) and Selection Flip Rate (SFR = 24.3%).
+- **Intervention**: Zero-cost deterministic catalog canonicalizer recovering **+3.0%** stability without answer leakage or token inflation.
+- **Methodology**: 1,000-resample task-clustered bootstrap uncertainty estimation; complete two-column arXiv LaTeX package with 7 publication figures.
 
 </td>
 <td width="50%" valign="top">
 
-**[ApexFlow](https://github.com/Akgithub2028/ApexFlow)**
-
-<img src="https://img.shields.io/badge/Market_Making-1a1b26?style=flat-square" /> <img src="https://img.shields.io/badge/Crypto_ETP-1a1b26?style=flat-square" />
+### 🛡️ [Agent-Reliability-and-Evaluation-Lab](https://github.com/Akgithub2028/Agent-Reliability-and-Evaluation-Lab)
+<img src="https://img.shields.io/badge/Agentic_Infra-MCP_Runtime-7F00FF?style=flat-square" /> <img src="https://img.shields.io/badge/Reliability-Circuit_Breakers-brightgreen?style=flat-square" /> <img src="https://img.shields.io/badge/Tests-109_Passed-blue?style=flat-square" />
 <br/>
-<img src="https://img.shields.io/github/languages/top/Akgithub2028/ApexFlow?style=flat-square&logo=python&logoColor=white&color=00f2fe&labelColor=0a0b10" />
-<img src="https://img.shields.io/github/stars/Akgithub2028/ApexFlow?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
+<img src="https://img.shields.io/github/languages/top/Akgithub2028/Agent-Reliability-and-Evaluation-Lab?style=flat-square&logo=python&logoColor=white&color=00f2fe&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/stars/Akgithub2028/Agent-Reliability-and-Evaluation-Lab?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
 
-Low-latency crypto ETP market-making and cross-exchange execution research platform.
+Production reliability, benchmarking, and evaluation layer for Model Context Protocol (MCP) agent runtimes.
+- **Protocol & Interop**: Dynamic protocol negotiation, agent-to-agent (A2A) message serialization, and schema validation.
+- **Resilience Engineering**: Distributed circuit breakers, connection pooling, backoff retry queues, and adaptive token streaming.
+- **Validation**: Comprehensive 109-test test suite with simulated network partitions and high-concurrency throughput benchmarks.
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-**[VenueWatch](https://github.com/Akgithub2028/VenueWatch)**
-
-<img src="https://img.shields.io/badge/Market_Microstructure-1a1b26?style=flat-square" /> <img src="https://img.shields.io/badge/Multi_Venue-1a1b26?style=flat-square" />
+### 🧪 [Agent-Harness](https://github.com/Akgithub2028/Agent-Harness)
+<img src="https://img.shields.io/badge/AI_Eval-Deterministic_Sandbox-orange?style=flat-square" /> <img src="https://img.shields.io/badge/Benchmarks-Multi--Turn_Agents-brightgreen?style=flat-square" />
 <br/>
-<img src="https://img.shields.io/github/languages/top/Akgithub2028/VenueWatch?style=flat-square&logo=python&logoColor=white&color=00f2fe&labelColor=0a0b10" />
-<img src="https://img.shields.io/github/stars/Akgithub2028/VenueWatch?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
+<img src="https://img.shields.io/github/languages/top/Akgithub2028/Agent-Harness?style=flat-square&logo=python&logoColor=white&color=00f2fe&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/stars/Akgithub2028/Agent-Harness?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
 
-Normalizes, measures, and statistically validates real-time order-book liquidity, execution slippage, and infrastructure reliability across Binance, Coinbase, Kraken, and OKX.
+Robust, research-grounded evaluation framework designed to benchmark the reliability of LLM-based autonomous agents in deterministic environments.
+- **Deterministic Sandboxing**: Isolates execution state across multi-turn trajectories to prevent evaluation leakage.
+- **Trajectory Scoring**: Multi-metric evaluation spanning step-level tool precision, plan adherence, and fail-stop safety policies.
 
 </td>
 <td width="50%" valign="top">
 
-**[IMC Prosperity 4 Backtester](https://github.com/Akgithub2028/IMC-Prosperity-4-Backtester)**
-
-<img src="https://img.shields.io/badge/Backtesting-1a1b26?style=flat-square" /> <img src="https://img.shields.io/badge/PnL_Analytics-1a1b26?style=flat-square" />
+### ⚡ [nano-VLLM](https://github.com/Akgithub2028/nano-VLLM)
+<img src="https://img.shields.io/badge/Inference_Engine-From_Scratch-00F2FE?style=flat-square" /> <img src="https://img.shields.io/badge/Systems-PagedAttention-76B900?style=flat-square" />
 <br/>
-<img src="https://img.shields.io/github/languages/top/Akgithub2028/IMC-Prosperity-4-Backtester?style=flat-square&logo=python&logoColor=white&color=00f2fe&labelColor=0a0b10" />
-<img src="https://img.shields.io/github/stars/Akgithub2028/IMC-Prosperity-4-Backtester?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
+<img src="https://img.shields.io/github/languages/top/Akgithub2028/nano-VLLM?style=flat-square&logo=python&logoColor=white&color=00f2fe&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/stars/Akgithub2028/nano-VLLM?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
 
-Pure-Python backtesting engine with built-in PnL charts, drawdown analysis, Sharpe/Calmar metrics, and Colab support. Clone → overwrite trader → run.
+A minimalistic, educational yet production-grounded implementation of a high-performance LLM inference engine built from scratch.
+- **Core Techniques**: Implements PagedAttention memory management, continuous dynamic batching, and KV-cache block allocation.
+- **Performance**: Dramatically reduces memory fragmentation and maximizes token generation throughput on constrained GPU instances.
 
 </td>
 </tr>
-</table>
-
-### 🤖 Autonomous Multi-Agent AI Systems
-
-<table>
 <tr>
 <td width="50%" valign="top">
 
-**[Autonomous AI Co-Scientist](https://github.com/Akgithub2028/Autonomous-AI-Co-Scientist)**
+### 🎯 [nano-llm-posttraining](https://github.com/Akgithub2028/nano-llm-posttraining)
+<img src="https://img.shields.io/badge/Post--Training-SFT_%7C_DPO_%7C_GRPO-FF6B6B?style=flat-square" /> <img src="https://img.shields.io/badge/Hardware-8GB_GPU_Optimized-yellow?style=flat-square" />
+<br/>
+<img src="https://img.shields.io/github/languages/top/Akgithub2028/nano-llm-posttraining?style=flat-square&logo=python&logoColor=white&color=00f2fe&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/stars/Akgithub2028/nano-llm-posttraining?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
 
-<img src="https://img.shields.io/badge/Multi_Agent-1a1b26?style=flat-square" /> <img src="https://img.shields.io/badge/RAG-1a1b26?style=flat-square" />
+Minimalist LLM post-training framework optimized for consumer hardware (8GB GPU).
+- **Alignment Workflows**: Hands-on mathematical implementations of KL Divergence constraints, Supervised Fine-Tuning (SFT), and Direct Preference Optimization (DPO).
+- **Reasoning Distillation**: Group Relative Policy Optimization (GRPO) for DeepSeek-R1-style reasoning generation.
+
+</td>
+<td width="50%" valign="top">
+
+### 🔬 [Autonomous AI Co-Scientist](https://github.com/Akgithub2028/Autonomous-AI-Co-Scientist)
+<img src="https://img.shields.io/badge/Multi_Agent-Google_Co--Scientist-4285F4?style=flat-square" /> <img src="https://img.shields.io/badge/Architecture-Hierarchical_RAG-blue?style=flat-square" />
 <br/>
 <img src="https://img.shields.io/github/languages/top/Akgithub2028/Autonomous-AI-Co-Scientist?style=flat-square&logo=python&logoColor=white&color=00f2fe&labelColor=0a0b10" />
 <img src="https://img.shields.io/github/stars/Akgithub2028/Autonomous-AI-Co-Scientist?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
 
-Extends Google's AI Co-Scientist with modular multi-agent orchestration, retrieval-augmented reasoning, long-term memory, automated evaluation, benchmarking, and Docker deployment.
+Autonomous scientific research platform implementing and extending Google's AI Co-Scientist architecture.
+- **Multi-Agent RAG**: Autonomous generation, validation, and critique of scientific hypotheses using persistent vector memory.
+- **Infra**: Fully containerized Docker deployment with automated evaluation and benchmarking pipelines.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🤖 [AutoResearch](https://github.com/Akgithub2028/AutoResearch)
+<img src="https://img.shields.io/badge/Self--Reflective-Agentic_Search-purple?style=flat-square" /> <img src="https://img.shields.io/badge/Cognitive-Hierarchical_Loops-blue?style=flat-square" />
+<br/>
+<img src="https://img.shields.io/github/languages/top/Akgithub2028/AutoResearch?style=flat-square&logo=python&logoColor=white&color=00f2fe&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/stars/Akgithub2028/AutoResearch?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
+
+Self-reflective hierarchical multi-agent research platform. Employs supervisor-worker agent topologies to autonomously generate, refine, and peer-review research hypotheses.
 
 </td>
 <td width="50%" valign="top">
 
-**[VoRTeX](https://github.com/Akgithub2028/VoRTeX)**
-
-<img src="https://img.shields.io/badge/LLM_Orchestration-1a1b26?style=flat-square" /> <img src="https://img.shields.io/badge/Multi_Tenant_SaaS-1a1b26?style=flat-square" />
+### ⚙️ [Distributed In-Memory Key-Value Store](https://github.com/Akgithub2028/Distributed-In-Memory-Key-Value-Store)
+<img src="https://img.shields.io/badge/Distributed_Systems-C%2B%2B-00599C?style=flat-square" /> <img src="https://img.shields.io/badge/Storage-Lock--Free_Caching-brightgreen?style=flat-square" />
 <br/>
-<img src="https://img.shields.io/github/languages/top/Akgithub2028/VoRTeX?style=flat-square&logo=python&logoColor=white&color=00f2fe&labelColor=0a0b10" />
-<img src="https://img.shields.io/github/stars/Akgithub2028/VoRTeX?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
+<img src="https://img.shields.io/github/languages/top/Akgithub2028/Distributed-In-Memory-Key-Value-Store?style=flat-square&logo=cplusplus&logoColor=white&color=00599C&labelColor=0a0b10" />
+<img src="https://img.shields.io/github/stars/Akgithub2028/Distributed-In-Memory-Key-Value-Store?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
 
-Self-hostable AI execution engine in Python 3.12 with FastAPI, PostgreSQL 16, Redis 7, and OpenTelemetry — architected for multi-tenant SaaS LLM-workflow orchestration.
+High-performance, distributed, in-memory caching engine and key-value database built in modern C++ with consensus replication, dynamic sharding, and sub-millisecond retrieval.
 
 </td>
 </tr>
@@ -203,20 +267,23 @@ Self-hostable AI execution engine in Python 3.12 with FastAPI, PostgreSQL 16, Re
 
 ---
 
+### 📂 More Systems & Quantitative Engineering Repositories
+
 <details>
-<summary><b>📂 More Projects — click to expand</b></summary>
+<summary><b>Click to expand quantitative systems and specialized ML repositories</b></summary>
 <br/>
 
-| Repository | Language | Description |
-| :--- | :---: | :--- |
-| [Real-Time-Market-Making-Execution-Engine](https://github.com/Akgithub2028/Real-Time-Market-Making-Execution-Engine) | `C++` | Production-grade, low-latency electronic market-making system built to demonstrate quantitative microstructure and high-performance C++ systems engineering. |
-| [AutoResearch](https://github.com/Akgithub2028/AutoResearch) | `Python` | Self-reflective, hierarchical multi-agent research platform. |
-| [Production-Grade-Multi-Agent-AI-Content-Generation-Platform](https://github.com/Akgithub2028/Production-Grade-Multi-Agent-AI-Content-Generation-Platform) | `Python` | Hierarchical multi-agent AI system for autonomous, research-grounded blog generation. |
-| [Evolutionary-Neural-Architecture-Search](https://github.com/Akgithub2028/Evolutionary-Neural-Architecture-Search) | `Jupyter / PyTorch` | Lightweight, native Neural Architecture Search framework driven by a custom-built genetic algorithm. |
-| [Distributed-In-Memory-Key-Value-Store](https://github.com/Akgithub2028/Distributed-In-Memory-Key-Value-Store) | `C++` | High-performance, distributed, in-memory caching engine and key-value database. |
-| [MultiClass_Image_Classification_Using_CNN](https://github.com/Akgithub2028/MultiClass_Image_Classification_Using_CNN) | `Jupyter Notebook` | CNN model classifying Alzheimer's disease risk across 44,000 human brain MRI images into 4 risk tiers. |
-| [Media-Bias-Mitigation-](https://github.com/Akgithub2028/Media-Bias-Mitigation-) | `Python` | Mitigates ideological media bias across 5 news sources and Twitter via a bias-mitigated summary chatbot. |
-| [MinimalBlockChainPy](https://github.com/Akgithub2028/MinimalBlockChainPy) | `Python` | Minimal blockchain implementation demonstrating proof-of-work, hashing, and cryptographic ledger consensus. |
+| Repository | Domain / Focus | Key Technologies | Description |
+| :--- | :---: | :---: | :--- |
+| **[Real-Time-Market-Making-Execution-Engine](https://github.com/Akgithub2028/Real-Time-Market-Making-Execution-Engine)** | Systems / Microstructure | `C++20`, `Lock-Free`, `Sockets` | Low-latency electronic market-making system built for sub-millisecond limit order-book processing and inventory control. |
+| **[Multi-Alpha-Engineering-Convex-Optimization-Engine](https://github.com/Akgithub2028/Multi-Alpha-Engineering-Convex-Optimization-Engine)** | Convex Opt / Quant | `Python`, `CVXPY`, `NumPy` | Multi-alpha signal discovery, covariance shrinkage, and convex risk optimization (AlphaStack). |
+| **[ApexFlow](https://github.com/Akgithub2028/ApexFlow)** | Execution / Quant | `Python`, `WebSockets`, `APIs` | Low-latency crypto ETP market-making and cross-exchange execution research platform. |
+| **[VenueWatch](https://github.com/Akgithub2028/VenueWatch)** | Market Microstructure | `Python`, `Asyncio`, `Analytics` | Normalizes, measures, and validates real-time liquidity, slippage, and API reliability across Binance, Coinbase, Kraken, OKX. |
+| **[IMC-Prosperity-4-Backtester](https://github.com/Akgithub2028/IMC-Prosperity-4-Backtester)** | Simulation & Backtesting | `Python`, `Colab`, `Risk Metrics` | Pure-Python backtester with built-in PnL visualization, drawdown analysis, and Sharpe/Calmar calculation. |
+| **[Evolutionary-Neural-Architecture-Search](https://github.com/Akgithub2028/Evolutionary-Neural-Architecture-Search)** | AutoML / Deep Learning | `PyTorch`, `Genetic Algorithms` | Native NAS framework discovering optimal neural architectures via custom genetic operators. |
+| **[Media-Bias-Mitigation-](https://github.com/Akgithub2028/Media-Bias-Mitigation-) | NLP / Fairness | `Python`, `Transformers`, `NLP` | News media bias mitigation across ideological axes with balanced multi-perspective summarization. |
+| **[MultiClass_Image_Classification_Using_CNN](https://github.com/Akgithub2028/MultiClass_Image_Classification_Using_CNN)** | Computer Vision | `PyTorch`, `CNNs`, `Medical AI` | Multi-class Alzheimer's disease classification across 44,000 brain MRI scans. |
+| **[MinimalBlockChainPy](https://github.com/Akgithub2028/MinimalBlockChainPy)** | Cryptography / Systems | `Python`, `Consensus`, `Hashing` | Minimal blockchain engine demonstrating proof-of-work, cryptographic hashing, and distributed ledger integrity. |
 
 </details>
 
@@ -232,24 +299,28 @@ Self-hostable AI execution engine in Python 3.12 with FastAPI, PostgreSQL 16, Re
   <img src="./profile/streak.svg" alt="Streak Stats" />
 </div>
 
-<sub><i>These cards are generated and committed by a GitHub Action every 24h — no third-party runtime dependency, so they won't go blank.</i></sub>
+<sub><i>These cards are generated and committed by a GitHub Action every 24h — no third-party runtime dependency, so they load instantly and never go blank.</i></sub>
 
 ---
 
-## 📬 Connect
+## 📬 Connect & Collaborate
 
 <div align="center">
+  <a href="https://linkedin.com/in/aayaann-kausar-8b2813344/">
+    <img src="https://img.shields.io/badge/LinkedIn-Aayaann_Kausar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  &nbsp;&nbsp;
   <a href="https://github.com/Akgithub2028">
     <img src="https://img.shields.io/badge/GitHub-Akgithub2028-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
   &nbsp;&nbsp;
-  <a href="https://akgithub2028.github.io/aayaann-kausar.github.io/">
-    <img src="https://img.shields.io/badge/Portfolio-View_Site-D14836?style=for-the-badge&logo=vercel&logoColor=white" />
+  <a href="https://akgithub2028.github.io/HomePage/">
+    <img src="https://img.shields.io/badge/Portfolio-Interactive_HomePage-FF007F?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
 </div>
 
 <br />
 
 <div align="center">
-  <sub>Built for speed, in more ways than one — <b>LatencySlayerX</b></sub>
+  <sub>Engineering reliable agentic intelligence and high-throughput systems infrastructure.</sub>
 </div>
