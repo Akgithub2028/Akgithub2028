@@ -30,7 +30,7 @@
 
 ## 🌌 About Me
 
-I am an **AI Systems & Agentic Infrastructure Engineer** and researcher at the **Indian Institute of Technology (IIT) Kharagpur**. My work focuses on building **mathematically grounded, zero-defect agentic runtimes, speculative execution engines, protocol security defense platforms, and enterprise distributed cloud backbones**.
+I am an **AI Systems & Agentic Infrastructure Engineer** and researcher at the **Indian Institute of Technology (IIT) Kharagpur**. My work focuses on building **mathematically grounded,agentic runtimes, speculative execution engines, protocol security defense platforms, and enterprise distributed cloud backbones**.
 
 I bridge the gap between academic AI research and high-throughput production infrastructure:
 - 🔬 **Agentic AI Research & Invariance Theory**: Formulated the *Tool-Trust Invariance* benchmark and empirical preprint, establishing formal metrics ($\text{CTSS}$, $\text{SFR}$) to diagnose non-invariant tool selection in foundation models, backed by zero-cost deterministic canonicalization middleware.
