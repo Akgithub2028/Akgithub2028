@@ -15,14 +15,14 @@
     <a href="https://github.com/Akgithub2028/Tool-Trust-Invariance-LAB"><img src="https://img.shields.io/badge/Preprint-arXiv_cs.AI-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white&labelColor=0a0b10" alt="ArXiv Preprint" /></a>
   </p>
 
-  <!-- Dynamic Contribution Activity Snake -->
+  <!-- Dynamic Contribution Activity Pac-Man -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Akgithub2028/Akgithub2028/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Akgithub2028/Akgithub2028/output/github-contribution-grid-snake.svg">
-    <img alt="github contribution snake animation" src="https://raw.githubusercontent.com/Akgithub2028/Akgithub2028/output/github-contribution-grid-snake-dark.svg" width="900" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Akgithub2028/Akgithub2028/output/pacman-contribution-graph-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Akgithub2028/Akgithub2028/output/pacman-contribution-graph.svg">
+    <img alt="github contribution pacman animation" src="https://raw.githubusercontent.com/Akgithub2028/Akgithub2028/output/pacman-contribution-graph-dark.svg" width="900" />
   </picture>
 
-  <sub><i>(Snake updates automatically from live contribution activity)</i></sub>
+  <sub><i>(Pac-Man updates automatically from live contribution activity)</i></sub>
 
   ---
 
