@@ -149,11 +149,7 @@ I bridge the gap between academic AI research and high-throughput production inf
 
 <table>
 <tr>
-<td width="50%" valign="top">
 
-
-</td>
-<td width="50%" valign="top">
 
 ### ⚡ [SpecTool](https://github.com/Akgithub2028/SpecTool)
 <img src="https://img.shields.io/badge/Speculative_Execution-LLM_Agents-00F2FE?style=flat-square" /> <img src="https://img.shields.io/badge/Speedup-1.25x_Latency_Reduction-brightgreen?style=flat-square" /> <img src="https://img.shields.io/badge/Safety-Python_AST_Verified-orange?style=flat-square" />
