@@ -151,16 +151,6 @@ I bridge the gap between academic AI research and high-throughput production inf
 <tr>
 <td width="50%" valign="top">
 
-### 🔬 [Tool-Trust Invariance Lab](https://github.com/Akgithub2028/Tool-Trust-Invariance-LAB)
-<img src="https://img.shields.io/badge/Agentic_AI_Research-Preprint-00F2FE?style=flat-square" /> <img src="https://img.shields.io/badge/Evaluation-480_Live_Trials-brightgreen?style=flat-square" /> <img src="https://img.shields.io/badge/arXiv-Ready_Package-red?style=flat-square" />
-<br/>
-<img src="https://img.shields.io/github/languages/top/Akgithub2028/Tool-Trust-Invariance-LAB?style=flat-square&logo=python&logoColor=white&color=00f2fe&labelColor=0a0b10" />
-<img src="https://img.shields.io/github/stars/Akgithub2028/Tool-Trust-Invariance-LAB?style=flat-square&logo=github&logoColor=white&color=7F00FF&labelColor=0a0b10&label=★" />
-
-Formal empirical benchmark and publication paper evaluating whether frontier LLMs (*Llama-3.2-11b*, *GPT-OSS-20B*) select tools invariantly under semantics-preserving catalog transformations.
-- **Formulation**: Formulated Conditional Tool Selection Stability ($\text{CTSS} = 96.3\%$) and Selection Flip Rate ($\text{SFR} = 24.3\%$).
-- **Intervention**: Zero-cost deterministic catalog canonicalizer recovering **+3.0%** stability without answer leakage or token inflation.
-- **Rigorous Statistics**: 1,000-resample task-clustered bootstrap uncertainty estimation; complete two-column arXiv LaTeX package with 7 publication figures.
 
 </td>
 <td width="50%" valign="top">
