@@ -11,7 +11,7 @@
   <p align="center">
     <a href="https://github.com/Akgithub2028"><img src="https://img.shields.io/github/followers/Akgithub2028?style=for-the-badge&color=00F2FE&logo=github&logoColor=white&labelColor=0a0b10" alt="Followers" /></a>
     <a href="https://linkedin.com/in/aayaann-kausar-8b2813344/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0a0b10" alt="LinkedIn" /></a>
-    <a href="https://akgithub2028.github.io/HomePage/"><img src="https://img.shields.io/badge/Portfolio-Interactive_Site-ff007f?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0a0b10" alt="Portfolio" /></a>
+    <a href="https://portfolio-website-l3a8.vercel.app/"><img src="https://img.shields.io/badge/Portfolio_Site-ff007f?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0a0b10" alt="Portfolio" /></a>
     <a href="https://github.com/Akgithub2028/Tool-Trust-Invariance-LAB"><img src="https://img.shields.io/badge/Preprint-arXiv_cs.AI-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white&labelColor=0a0b10" alt="ArXiv Preprint" /></a>
   </p>
 
