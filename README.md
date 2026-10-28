@@ -133,6 +133,21 @@ My work connects model behaviour, application engineering, and the systems that 
 
 </details>
 
+## GitHub activity
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="profile/stats-light.svg">
+    <img src="profile/stats.svg" width="600" alt="GitHub stats: contributions over the last year, stars on public original repositories, public original repository count, and followers. Updated daily.">
+  </picture>
+</p>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="profile/top-langs-light.svg">
+    <img src="profile/top-langs.svg" width="600" alt="Most-used languages by code bytes across public original repositories. Updated daily.">
+  </picture>
+</p>
+
 ---
 
 <p align="center">

@@ -1,4 +1,4 @@
-name: Update Contribution Signal
+name: Update Profile Activity
 
 on:
   schedule:
@@ -8,6 +8,7 @@ on:
       - main
     paths:
       - "scripts/update_signal.py"
+      - "scripts/update_stats.py"
       - ".github/workflows/profile-assets.yml"
   workflow_dispatch:
 
@@ -29,12 +30,19 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PROFILE_OWNER: ${{ github.repository_owner }}
+      - name: Generate GitHub stats and language cards
+        if: ${{ !cancelled() }}
+        run: python3 scripts/update_stats.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROFILE_OWNER: ${{ github.repository_owner }}
       - name: Commit generated assets
+        if: ${{ !cancelled() }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/signal.svg profile/signal-mobile.svg
+          git add profile/*.svg
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "chore: refresh contribution signal"
+          git commit -m "chore: refresh profile activity"
           git pull --rebase origin main
           git push
