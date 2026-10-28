@@ -3,7 +3,12 @@
 The profile uses native GitHub Markdown for headings, project descriptions,
 technology labels, links, and the technical-focus table. Content inherits
 GitHub's typography and light/dark theme, wraps on mobile, and remains selectable.
-There are no generated hero banners, project cards, or animated text assets.
+The supplied coding illustration is preserved as the original animated WebP
+in the introduction (20 frames, looping). The clipboard PNG is its reduced-motion
+fallback. Both are displayed at 150 × 150; neither source image was edited.
+Small local SVG labels provide muted category colours; project text remains native
+Markdown. Bold text marks methods/results, while monospace identifies selected
+APIs and frameworks. There are no generated hero banners or animated project cards.
 
 Featured work is limited to SFP, Real-Time Voice Translator, Qwen QLoRA,
 NexusAgent, Autonomous AI Co-Scientist, and the Wunder Fund forecasting competition.
