@@ -1,10 +1,10 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/hero-mobile.png">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/hero.png">
-  <source media="(max-width: 600px)" srcset="assets/hero-mobile.gif">
-  <img src="assets/hero.gif" width="100%" alt="Aayaann Kausar · AI Research & Engineering · IIT Kharagpur">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/hero-mobile.png?v=2">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/hero.png?v=2">
+  <source media="(max-width: 600px)" srcset="assets/hero-mobile.gif?v=2">
+  <img src="assets/hero.gif?v=2" width="100%" alt="Aayaann Kausar · AI Research & Engineering · IIT Kharagpur">
 </picture>
 
 <p>
@@ -33,10 +33,10 @@ My growing focus: **cloud infrastructure, efficient inference, CUDA and Triton.*
 
 <a href="https://github.com/Akgithub2028/SFP">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/sfp-mobile.png">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/sfp.png">
-  <source media="(max-width: 600px)" srcset="assets/sfp-mobile.gif">
-  <img src="assets/sfp.gif" width="100%" alt="Subspace Feature Preservation · drift prediction R² 0.933 · harmonic score 0.699">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/sfp-mobile.png?v=2">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/sfp.png?v=2">
+  <source media="(max-width: 600px)" srcset="assets/sfp-mobile.gif?v=2">
+  <img src="assets/sfp.gif?v=2" width="100%" alt="Subspace Feature Preservation · drift prediction R² 0.933 · harmonic score 0.699">
 </picture>
 </a>
 
@@ -46,10 +46,10 @@ I study how drift in **32 task-critical activation directions** predicts catastr
 
 <a href="https://github.com/Akgithub2028/Real-Time-AI-Voice-Translator">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/translator-mobile.png">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/translator.png">
-  <source media="(max-width: 600px)" srcset="assets/translator-mobile.gif">
-  <img src="assets/translator.gif" width="100%" alt="Real-Time Voice Translator · seven languages · 20 ms audio frames">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/translator-mobile.png?v=2">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/translator.png?v=2">
+  <source media="(max-width: 600px)" srcset="assets/translator-mobile.gif?v=2">
+  <img src="assets/translator.gif?v=2" width="100%" alt="Real-Time Voice Translator · seven languages · 20 ms audio frames">
 </picture>
 </a>
 
@@ -59,10 +59,10 @@ I study how drift in **32 task-critical activation directions** predicts catastr
 
 <a href="https://github.com/Akgithub2028/qwen-domain-finetuning">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/qlora-mobile.png">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/qlora.png">
-  <source media="(max-width: 600px)" srcset="assets/qlora-mobile.gif">
-  <img src="assets/qlora.gif" width="100%" alt="Qwen2.5 QLoRA Fine-Tuning · 30.42% relative ROUGE-L gain · 161 held-out tasks">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/qlora-mobile.png?v=2">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/qlora.png?v=2">
+  <source media="(max-width: 600px)" srcset="assets/qlora-mobile.gif?v=2">
+  <img src="assets/qlora.gif?v=2" width="100%" alt="Qwen2.5 QLoRA Fine-Tuning · 30.42% relative ROUGE-L gain · 161 held-out tasks">
 </picture>
 </a>
 
@@ -72,10 +72,10 @@ Adapted Qwen2.5-1.5B on **1,286 ML-systems tasks** using 4-bit NF4 and rank-16 a
 
 <a href="https://github.com/Akgithub2028/NexusAgent-Enterprise-Autonomous-Multi-Agent-Decision-Intelligence-Platform">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/nexus-mobile.png">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/nexus.png">
-  <source media="(max-width: 600px)" srcset="assets/nexus-mobile.gif">
-  <img src="assets/nexus.gif" width="100%" alt="NexusAgent · 96.25% retrieval Hit@1 · 28 of 28 security cases passed">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/nexus-mobile.png?v=2">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/nexus.png?v=2">
+  <source media="(max-width: 600px)" srcset="assets/nexus-mobile.gif?v=2">
+  <img src="assets/nexus.gif?v=2" width="100%" alt="NexusAgent · 96.25% retrieval Hit@1 · 28 of 28 security cases passed">
 </picture>
 </a>
 
@@ -85,10 +85,10 @@ A **LangGraph decision platform** combining Milvus + BM25 retrieval, BGE reranki
 
 <a href="https://github.com/Akgithub2028/Autonomous-AI-Co-Scientist">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/coscientist-mobile.png">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/coscientist.png">
-  <source media="(max-width: 600px)" srcset="assets/coscientist-mobile.gif">
-  <img src="assets/coscientist.gif" width="100%" alt="Autonomous AI Co-Scientist · Project Nova · Elo hypothesis ranking and corrective RAG">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/coscientist-mobile.png?v=2">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/coscientist.png?v=2">
+  <source media="(max-width: 600px)" srcset="assets/coscientist-mobile.gif?v=2">
+  <img src="assets/coscientist.gif?v=2" width="100%" alt="Autonomous AI Co-Scientist · Project Nova · Elo hypothesis ranking and corrective RAG">
 </picture>
 </a>
 
@@ -99,15 +99,15 @@ A research workflow that **reviews literature, generates hypotheses, critiques a
 ## Focus areas
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/focus-mobile.svg">
-  <img src="assets/focus.svg" width="100%" alt="AI research: continual learning, QLoRA, PyTorch, Transformers and Lean 4. AI engineering: speech, RAG, LangGraph, FastAPI, Next.js, WebSockets. Software and cloud: AWS, GCP, Docker, Kubernetes, Terraform, CI/CD and observability. Exploring GPU infrastructure: CUDA, Triton, C++, kernels and LLM serving.">
+  <source media="(max-width: 600px)" srcset="assets/focus-mobile.svg?v=2">
+  <img src="assets/focus.svg?v=2" width="100%" alt="AI research: continual learning, QLoRA, PyTorch, Transformers and Lean 4. AI engineering: speech, RAG, LangGraph, FastAPI, Next.js, WebSockets. Software and cloud: AWS, GCP, Docker, Kubernetes, Terraform, CI/CD and observability. Exploring GPU infrastructure: CUDA, Triton, C++, kernels and LLM serving.">
 </picture>
 
 ## Competition
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/competition-mobile.svg">
-  <img src="assets/competition.svg" width="100%" alt="Wunder Fund HFT Market State Forecasting Challenge · 9th of 5,000+ competitors · final R² 0.3920 · four-layer, eight-head Transformer with torch.compile and Numba CPU inference">
+  <source media="(max-width: 600px)" srcset="assets/competition-mobile.svg?v=2">
+  <img src="assets/competition.svg?v=2" width="100%" alt="Wunder Fund HFT Market State Forecasting Challenge · 9th of 5,000+ competitors · final R² 0.3920 · four-layer, eight-head Transformer with torch.compile and Numba CPU inference">
 </picture>
 
 <p align="center">
@@ -115,6 +115,6 @@ A research workflow that **reviews literature, generates hypotheses, critiques a
 </p>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/footer-mobile.svg">
-  <img src="assets/footer.svg" width="100%" alt="Curious about models. Serious about systems.">
+  <source media="(max-width: 600px)" srcset="assets/footer-mobile.svg?v=2">
+  <img src="assets/footer.svg?v=2" width="100%" alt="Curious about models. Serious about systems.">
 </picture>
