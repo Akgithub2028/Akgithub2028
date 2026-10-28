@@ -54,3 +54,11 @@ GitHub-reported code bytes across those repositories, excluding forks and privat
 repositories; they describe code distribution, not proficiency. The six largest
 languages are displayed with percentages of all reported language bytes. Repository
 pagination is supported. Failed API requests leave the last generated cards intact.
+
+The streak panel uses a vector flame, orange ring, and three columns for all-time
+contributions, current streak, and longest streak. Desktop/mobile and dark/light
+variants preserve legibility. All account years are fetched from account creation;
+annual calendars are merged by date and checked for completeness before replacing
+any cards. Streak days use UTC. A contribution yesterday keeps a current streak
+active while today's UTC day is unfinished. The language card uses a segmented ring
+and legend, including an Other segment when more than six languages are present.

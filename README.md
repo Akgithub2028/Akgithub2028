@@ -137,6 +137,15 @@ My work connects model behaviour, application engineering, and the systems that 
 
 <p align="center">
   <picture>
+    <source media="(max-width: 600px) and (prefers-color-scheme: light)" srcset="profile/streak-mobile-light.svg">
+    <source media="(max-width: 600px)" srcset="profile/streak-mobile.svg">
+    <source media="(prefers-color-scheme: light)" srcset="profile/streak-light.svg">
+    <img src="profile/streak.svg" width="900" alt="Contribution streaks: all-time contributions, current streak, and longest streak with date ranges. Updated daily from GitHub.">
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
     <source media="(prefers-color-scheme: light)" srcset="profile/stats-light.svg">
     <img src="profile/stats.svg" width="600" alt="GitHub stats: contributions over the last year, stars on public original repositories, public original repository count, and followers. Updated daily.">
   </picture>
