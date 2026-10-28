@@ -1,32 +1,28 @@
 # Profile maintenance
 
-The homepage features only SFP, Real-Time Voice Translator, Qwen QLoRA,
+The profile uses native GitHub Markdown for headings, project descriptions,
+technology labels, links, and the technical-focus table. Content inherits
+GitHub's typography and light/dark theme, wraps on mobile, and remains selectable.
+There are no generated hero banners, project cards, or animated text assets.
+
+Featured work is limited to SFP, Real-Time Voice Translator, Qwen QLoRA,
 NexusAgent, Autonomous AI Co-Scientist, and the Wunder Fund forecasting competition.
-Project claims come from the supplied resume and each linked repository; the
-cards describe recorded experiments, not independently reproduced results.
+Project claims come from the supplied resume and linked repositories; reported
+results have not been independently reproduced in this profile repository.
+GPU programming and LLM serving are explicitly presented as current study.
 
-Edit `scripts/build_visuals.py` to update the cards or theme. With Pillow and the
-DejaVu system fonts installed, run `python3 scripts/build_visuals.py`. Commit the
-script and generated `assets/` files together. The desktop and mobile layouts
-are separate; README pictures choose the appropriate one. Reduced-motion
-preferences select static PNGs for the header and project cards, and the static
-contribution calendar instead of Pac-Man. The header has a 15-second role-text
-loop; cards use a quiet 4.8-second colour sweep with fixed numerical results.
-Project explanations and navigation are normal, selectable Markdown text.
-No scripts, external fonts, or SVG foreign objects execute on the profile.
+Pac-Man remains near the top. Its daily workflow publishes dark and light SVG
+animations to the `output` branch using pinned action revisions. A reduced-motion
+preference selects the static contribution calendar instead.
 
-`scripts/update_signal.py` reads the actual GitHub contribution calendar and
-atomically writes `profile/signal.svg`. The workflow runs daily with the built-in
-`GITHUB_TOKEN`; no personal access token or paid renderer is needed. API failure
-leaves the previous image intact. The date is UTC. Contribution counts follow
-GitHub's account visibility rules and are not a count of commits alone.
+`scripts/update_signal.py` reads GitHub's contribution calendar and atomically
+writes the desktop and mobile `profile/signal*.svg` files. The daily workflow
+uses the built-in `GITHUB_TOKEN`; no personal access token or paid renderer is
+needed. A failed API request leaves the last generated image intact. Dates are
+UTC. Contributions follow GitHub's visibility rules and include more than commits.
 
-The original Komarev URL and `Akgithub2028` username are preserved so the same
-profile-view counter continues. It counts image requests under Komarev/GitHub
-caching behavior, not distinct people. Do not change the username to reset the
-identity. Local preview tooling should replace that remote image with a
-placeholder to avoid adding preview requests to the counter.
-
-Pac-Man appears directly below the header and contact badges. Its daily workflow
-publishes dark and light SVG animations to the `output` branch, using pinned
-action revisions. The custom calendar remains as its reduced-motion fallback.
+The Komarev counter retains the original `Akgithub2028` username, preserving its
+counter identity. Only its appearance has changed to a compact, muted badge.
+The service counts image requests under Komarev/GitHub caching behaviour, not
+distinct people. Preview tools should substitute a placeholder for this image
+to avoid adding preview requests to the counter.

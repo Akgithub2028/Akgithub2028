@@ -1,120 +1,87 @@
-<div align="center">
+# Aayaann Kausar
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/hero-mobile.png?v=2">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/hero.png?v=2">
-  <source media="(max-width: 600px)" srcset="assets/hero-mobile.gif?v=2">
-  <img src="assets/hero.gif?v=2" width="100%" alt="Aayaann Kausar · AI Research & Engineering · IIT Kharagpur">
-</picture>
+**AI research and engineering · Software and cloud systems · IIT Kharagpur**
 
-<p>
-<a href="https://linkedin.com/in/aayaann-kausar-8b2813344/"><img src="https://img.shields.io/badge/LinkedIn-Connect-9DBAFF?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=252E4A" alt="Connect on LinkedIn"></a>
-<a href="https://ak-portfolio-website-two.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-Explore-E4B3DA?style=for-the-badge&logo=vercel&logoColor=white&labelColor=352B46" alt="Explore my portfolio"></a>
-<img src="https://komarev.com/ghpvc/?username=Akgithub2028&style=for-the-badge&color=7F00FF&labelColor=0a0b10&label=Profile+Views" alt="Profile views">
-</p>
+I work on continual learning, language-model adaptation, and AI applications. My current interests include efficient inference, GPU programming with CUDA and Triton, and infrastructure for AI systems.
+
+[LinkedIn](https://linkedin.com/in/aayaann-kausar-8b2813344/) · [Portfolio](https://ak-portfolio-website-two.vercel.app/) &nbsp; <img src="https://komarev.com/ghpvc/?username=Akgithub2028&style=flat-square&color=526c8c&label=Profile+views" alt="Profile views">
 
 <picture>
   <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="profile/signal-mobile.svg">
   <source media="(prefers-reduced-motion: reduce)" srcset="profile/signal.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Akgithub2028/Akgithub2028/output/pacman-contribution-graph.svg">
-  <img src="https://raw.githubusercontent.com/Akgithub2028/Akgithub2028/output/pacman-contribution-graph-dark.svg" width="100%" alt="Pac-Man animation of my GitHub contributions, refreshed daily">
+  <img src="https://raw.githubusercontent.com/Akgithub2028/Akgithub2028/output/pacman-contribution-graph-dark.svg" width="100%" alt="Pac-Man animation of my GitHub contribution history, updated daily">
 </picture>
 
-**AI researcher & engineer at IIT Kharagpur.**
+## Research
 
-I study model behaviour and build AI applications and software systems.<br>
-My growing focus: **cloud infrastructure, efficient inference, CUDA and Triton.**
+### [Subspace Feature Preservation](https://github.com/Akgithub2028/SFP)
 
-[Selected work](#selected-work) &nbsp; · &nbsp; [Focus areas](#focus-areas) &nbsp; · &nbsp; [Competition](#competition)
+Investigating how drift in task-critical activation directions predicts catastrophic forgetting, and whether preserving those directions improves sequential fine-tuning.
 
-</div>
+- **R² = 0.933** for drift along 32 ablation-ranked PCA directions in Qwen2.5-1.5B; **0.699** retention–plasticity harmonic score versus 0.631 for LwF.
+- Selective feature regularization and a **conditional forgetting bound verified in Lean 4**, with scale-dependent empirical findings.
 
-## Selected work
+`PyTorch` `LoRA` `PCA` `Lean 4`
 
-<a href="https://github.com/Akgithub2028/SFP">
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/sfp-mobile.png?v=2">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/sfp.png?v=2">
-  <source media="(max-width: 600px)" srcset="assets/sfp-mobile.gif?v=2">
-  <img src="assets/sfp.gif?v=2" width="100%" alt="Subspace Feature Preservation · drift prediction R² 0.933 · harmonic score 0.699">
-</picture>
-</a>
+[Paper](https://github.com/Akgithub2028/SFP/blob/main/paper/sfp.pdf) · [Code](https://github.com/Akgithub2028/SFP) · [Formal verification](https://github.com/Akgithub2028/SFP/tree/main/lean-sfp)
 
-I study how drift in **32 task-critical activation directions** predicts catastrophic forgetting in Qwen2.5-1.5B. The study combines selective feature regularization, controlled baselines and a **conditional forgetting bound verified in Lean 4**, with scale-dependent findings.
+## Selected projects
 
-[Explore code](https://github.com/Akgithub2028/SFP) · [Read the paper](https://github.com/Akgithub2028/SFP/blob/main/paper/sfp.pdf) · [Inspect Lean proofs](https://github.com/Akgithub2028/SFP/tree/main/lean-sfp)
+### [Real-Time Voice Translator](https://github.com/Akgithub2028/Real-Time-AI-Voice-Translator)
 
-<a href="https://github.com/Akgithub2028/Real-Time-AI-Voice-Translator">
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/translator-mobile.png?v=2">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/translator.png?v=2">
-  <source media="(max-width: 600px)" srcset="assets/translator-mobile.gif?v=2">
-  <img src="assets/translator.gif?v=2" width="100%" alt="Real-Time Voice Translator · seven languages · 20 ms audio frames">
-</picture>
-</a>
+Bidirectional speech translation across **seven languages**, with streaming voice output, bilingual captions, and latency monitoring. Uses 20 ms audio frames; backend validation includes 27 tests.
 
-**Bidirectional speech translation across seven languages**, with streamed voice output, bilingual captions and stage-level latency monitoring. Next.js and FastAPI WebSockets connect Whisper, GPT-OSS 20B and ElevenLabs; the backend has **27 recorded passing tests**.
+`Python` `FastAPI` `WebSockets` `Next.js` `TypeScript` `Whisper` `GPT-OSS 20B` `ElevenLabs`
 
-[Try the live demo](https://real-time-ai-voice-translator.vercel.app) · [View latency dashboard](https://real-time-ai-voice-translator.vercel.app/status) · [Explore code](https://github.com/Akgithub2028/Real-Time-AI-Voice-Translator)
+[Live demo](https://real-time-ai-voice-translator.vercel.app) · [Latency dashboard](https://real-time-ai-voice-translator.vercel.app/status) · [Code](https://github.com/Akgithub2028/Real-Time-AI-Voice-Translator)
 
-<a href="https://github.com/Akgithub2028/qwen-domain-finetuning">
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/qlora-mobile.png?v=2">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/qlora.png?v=2">
-  <source media="(max-width: 600px)" srcset="assets/qlora-mobile.gif?v=2">
-  <img src="assets/qlora.gif?v=2" width="100%" alt="Qwen2.5 QLoRA Fine-Tuning · 30.42% relative ROUGE-L gain · 161 held-out tasks">
-</picture>
-</a>
+### [Qwen2.5 QLoRA Fine-Tuning](https://github.com/Akgithub2028/qwen-domain-finetuning)
 
-Adapted Qwen2.5-1.5B on **1,286 ML-systems tasks** using 4-bit NF4 and rank-16 adapters. Paired evaluation on 161 held-out tasks measures gains by topic and difficulty, alongside error analysis of the **14.2% of examples that regressed**.
+Adapted Qwen2.5-1.5B on 1,286 ML-systems tasks using 4-bit NF4 and rank-16 adapters. Paired evaluation found a **30.42% relative ROUGE-L improvement** across 161 held-out tasks, with topic-level analysis and **14.2% of examples regressing**.
 
-[Explore the study](https://github.com/Akgithub2028/qwen-domain-finetuning) · [Inspect evaluation results](https://github.com/Akgithub2028/qwen-domain-finetuning/tree/main/results)
+`PyTorch` `QLoRA` `PEFT` `TRL` `ROUGE-L` `BERTScore`
 
-<a href="https://github.com/Akgithub2028/NexusAgent-Enterprise-Autonomous-Multi-Agent-Decision-Intelligence-Platform">
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/nexus-mobile.png?v=2">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/nexus.png?v=2">
-  <source media="(max-width: 600px)" srcset="assets/nexus-mobile.gif?v=2">
-  <img src="assets/nexus.gif?v=2" width="100%" alt="NexusAgent · 96.25% retrieval Hit@1 · 28 of 28 security cases passed">
-</picture>
-</a>
+[Code and study](https://github.com/Akgithub2028/qwen-domain-finetuning) · [Evaluation results](https://github.com/Akgithub2028/qwen-domain-finetuning/tree/main/results)
 
-A **LangGraph decision platform** combining Milvus + BM25 retrieval, BGE reranking and SQLGlot-guarded MCP NL2SQL. Recorded validation includes **1,941 unit tests and 323 offline integration tests**; retrieval scores use 160 answerable synthetic queries.
+### [NexusAgent](https://github.com/Akgithub2028/NexusAgent-Enterprise-Autonomous-Multi-Agent-Decision-Intelligence-Platform)
 
-[Explore code](https://github.com/Akgithub2028/NexusAgent-Enterprise-Autonomous-Multi-Agent-Decision-Intelligence-Platform) · [See the architecture](https://github.com/Akgithub2028/NexusAgent-Enterprise-Autonomous-Multi-Agent-Decision-Intelligence-Platform/blob/main/docs/ARCHITECTURE.md) · [Inspect benchmark evidence](https://github.com/Akgithub2028/NexusAgent-Enterprise-Autonomous-Multi-Agent-Decision-Intelligence-Platform/tree/main/artifacts/public-evaluation)
+Decision-support platform combining hybrid retrieval, guarded MCP NL2SQL, and evidence review. Achieved **96.25% retrieval Hit@1** on 160 answerable synthetic queries; recorded validation includes **1,941 unit tests and 323 offline integration tests**.
 
-<a href="https://github.com/Akgithub2028/Autonomous-AI-Co-Scientist">
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/coscientist-mobile.png?v=2">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/coscientist.png?v=2">
-  <source media="(max-width: 600px)" srcset="assets/coscientist-mobile.gif?v=2">
-  <img src="assets/coscientist.gif?v=2" width="100%" alt="Autonomous AI Co-Scientist · Project Nova · Elo hypothesis ranking and corrective RAG">
-</picture>
-</a>
+`Python` `LangGraph` `Milvus` `BM25` `BGE` `MCP` `SQLGlot` `FastAPI`
 
-A research workflow that **reviews literature, generates hypotheses, critiques and ranks them with Elo tournaments**, then refines promising candidates. LangGraph orchestration connects corrective RAG, persistent vector memory and asynchronous workers.
+[Architecture](https://github.com/Akgithub2028/NexusAgent-Enterprise-Autonomous-Multi-Agent-Decision-Intelligence-Platform/blob/main/docs/ARCHITECTURE.md) · [Benchmark evidence](https://github.com/Akgithub2028/NexusAgent-Enterprise-Autonomous-Multi-Agent-Decision-Intelligence-Platform/tree/main/artifacts/public-evaluation) · [Code](https://github.com/Akgithub2028/NexusAgent-Enterprise-Autonomous-Multi-Agent-Decision-Intelligence-Platform)
 
-[Explore code & research workflow](https://github.com/Akgithub2028/Autonomous-AI-Co-Scientist)
+### [Autonomous AI Co-Scientist](https://github.com/Akgithub2028/Autonomous-AI-Co-Scientist)
 
-## Focus areas
+Multi-agent research workflow for literature review, hypothesis generation, critique, and iterative refinement. Combines **Elo-ranked hypotheses**, corrective RAG, persistent vector memory, and asynchronous workers.
 
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/focus-mobile.svg?v=2">
-  <img src="assets/focus.svg?v=2" width="100%" alt="AI research: continual learning, QLoRA, PyTorch, Transformers and Lean 4. AI engineering: speech, RAG, LangGraph, FastAPI, Next.js, WebSockets. Software and cloud: AWS, GCP, Docker, Kubernetes, Terraform, CI/CD and observability. Exploring GPU infrastructure: CUDA, Triton, C++, kernels and LLM serving.">
-</picture>
+`Python` `LangGraph` `ChromaDB` `Docker`
+
+[Code and research workflow](https://github.com/Akgithub2028/Autonomous-AI-Co-Scientist)
+
+## Technical focus
+
+| Area | Tools and topics |
+| :--- | :--- |
+| Model research and adaptation | PyTorch, Transformers, LoRA / QLoRA, PEFT, TRL, Lean 4 |
+| AI applications | LangGraph, retrieval-augmented generation, MCP, FastAPI, WebSockets, Next.js |
+| Software and cloud systems | Python, C++, TypeScript, Linux, Docker, Kubernetes, Terraform, CI/CD, AWS, GCP |
+| Current study | CUDA, Triton, GPU kernels, profiling, and LLM serving |
 
 ## Competition
 
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/competition-mobile.svg?v=2">
-  <img src="assets/competition.svg?v=2" width="100%" alt="Wunder Fund HFT Market State Forecasting Challenge · 9th of 5,000+ competitors · final R² 0.3920 · four-layer, eight-head Transformer with torch.compile and Numba CPU inference">
-</picture>
+**Wunder Fund — HFT Market State Forecasting Challenge**
 
-<p align="center">
-<b>JEE Main</b> top 0.29% &nbsp; / &nbsp; <b>JEE Advanced</b> top 3.2% &nbsp; / &nbsp; <b>WBJEE</b> top 0.20%
-</p>
+**9th of 5,000+ competitors** · Final R² **0.3920**
 
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/footer-mobile.svg?v=2">
-  <img src="assets/footer.svg?v=2" width="100%" alt="Curious about models. Serious about systems.">
-</picture>
+Trained a four-layer, eight-head Transformer and optimized CPU inference with `torch.compile`, Numba, and preallocated buffers.
+
+<details>
+<summary>Academic achievements</summary>
+
+- **JEE Main 2024:** top 0.29%.
+- **JEE Advanced 2024:** top 3.2%.
+- **WBJEE 2024:** top 0.20%.
+
+</details>
