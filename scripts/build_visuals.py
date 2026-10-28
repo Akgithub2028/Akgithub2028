@@ -1,290 +1,294 @@
-"""Build original profile artwork: python3 scripts/build_visuals.py.
+"""Build the profile's original gradient artwork and self-contained animations.
 
-Requires Pillow and system DejaVu fonts. All generated files are committed, so
-GitHub needs no font downloads, scripts, external renderers or image services.
+Requires Pillow and DejaVu fonts. Run: python3 scripts/build_visuals.py
+All text layout uses measured font widths. No browser scripts or remote fonts.
 """
 
 from html import escape
-from math import cos, sin, pi
+from math import sin, cos, pi
 from pathlib import Path
-import textwrap
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "assets"
+OUT = ROOT / 'assets'
 OUT.mkdir(exist_ok=True)
-BG, PANEL, WHITE = "#080c16", "#0d1422", "#edf4ff"
-MUTED, LINE = "#a0b2ca", "#27364d"
-CYAN, PINK, LIME = "#67e8f9", "#df79ff", "#cdff87"
-FONT_DIR = Path("/usr/share/fonts/truetype/dejavu")
+FONTS = Path('/usr/share/fonts/truetype/dejavu')
+WHITE = '#f5f7ff'
+MUTED = '#d0d8ec'
 
 
-def svg(w, h, content, title):
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" '
-            f'viewBox="0 0 {w} {h}" role="img"><title>{escape(title)}</title>'
-            f'<rect width="{w}" height="{h}" rx="14" fill="{BG}"/>{content}</svg>\n')
+def font(size, bold=False, mono=False):
+    name = 'DejaVuSansMono' if mono else 'DejaVuSans'
+    return ImageFont.truetype(str(FONTS / (name + ('-Bold' if bold else '') + '.ttf')), size)
 
 
-def text(x, y, value, size=16, color=WHITE, weight=400, mono=False, extra=""):
-    family = "DejaVu Sans Mono,monospace" if mono else "DejaVu Sans,Arial,sans-serif"
-    return (f'<text x="{x}" y="{y}" fill="{color}" font-family="{family}" '
-            f'font-size="{size}" font-weight="{weight}" {extra}>{escape(value)}</text>')
+def rgb(color):
+    return tuple(bytes.fromhex(color.lstrip('#')))
 
 
-def line(x1, y1, x2, y2, color=LINE, width=1):
-    return f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{color}" stroke-width="{width}"/>'
+def blend(a, b, t):
+    return tuple(round(x+(y-x)*t) for x,y in zip(a,b))
 
 
-def rect(x, y, w, h, fill=PANEL, stroke=LINE, rx=6):
-    return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="{fill}" stroke="{stroke}"/>'
+def backdrop(w, h, left, right, accent):
+    im = Image.new('RGB', (w,h))
+    d = ImageDraw.Draw(im)
+    a,b = rgb(left),rgb(right)
+    for x in range(w):
+        d.line((x,0,x,h),fill=blend(a,b,x/w))
+    glow = Image.new('RGBA',(w,h))
+    gd = ImageDraw.Draw(glow)
+    gd.ellipse((w*.55,-h*.8,w*1.25,h*.8),fill=(*rgb(accent),35))
+    glow = glow.filter(ImageFilter.GaussianBlur(h*.25))
+    return Image.alpha_composite(im.convert('RGBA'),glow).convert('RGB')
 
 
-def write(name, w, h, content, title):
-    (OUT / f"{name}.svg").write_text(svg(w, h, content, title))
+def gradient_text(im, xy, value, typeface, colors, phase=0):
+    bbox = typeface.getbbox(value)
+    width,height = int(typeface.getlength(value))+3,bbox[3]+3
+    mask = Image.new('L',(width,height))
+    ImageDraw.Draw(mask).text((0,0),value,font=typeface,fill=255)
+    ink = Image.new('RGB',(width,height))
+    d = ImageDraw.Draw(ink)
+    a,b = map(rgb,colors)
+    for x in range(width):
+        t = .5+.5*sin(x/max(width,1)*pi+phase*2*pi)
+        d.line((x,0,x,height),fill=blend(a,b,t))
+    im.paste(ink,xy,mask)
 
 
-def icon(kind, x, y, c):
-    """Illustrative geometry, never simulated benchmark plots."""
-    s = ""
-    if kind == "sfp":
-        for a in range(3):
-            for b in range(3):
-                px, py = x + 34 * a + 17 * b, y - 14 * a + 24 * b
-                s += rect(px, py, 16, 16, BG, c, 1)
-        s += line(x - 8, y + 94, x + 150, y + 26, PINK, 2)
-        s += text(x + 2, y + 119, "SUBSPACE / r=32", 11, MUTED, mono=True)
-    elif kind == "translator":
-        for i in range(27):
-            h = 8 + abs(sin(i * .77) * cos(i * .21)) * 72
-            s += line(x + i * 6, y + 45 - h/2, x + i * 6, y + 45 + h/2, c, 3)
-        s += text(x, y + 106, "AUDIO → TEXT → AUDIO", 11, MUTED, mono=True)
-    elif kind == "qlora":
-        for i in range(7):
-            for j in range(5):
-                active = i in (2, 3)
-                s += rect(x + i * 21, y + j * 17, 14, 10,
-                          c if active else PANEL, c if active else LINE, 1)
-        s += text(x, y + 107, "W + ΔW / NF4", 11, MUTED, mono=True)
-    else:
-        pts = [(x+10,y+45),(x+75,y),(x+75,y+45),(x+75,y+90),(x+145,y+45)]
-        for a,b in [(0,1),(0,2),(0,3),(1,4),(2,4),(3,4)]:
-            s += line(*pts[a],*pts[b],LINE,2)
-        for i,(px,py) in enumerate(pts):
-            s += rect(px-9,py-9,18,18,BG,c if i in (0,4) else PINK,4)
-        label = "RESEARCH LOOP" if kind == "coscientist" else "RETRIEVE → VERIFY"
-        s += text(x-5,y+122,label,11,MUTED,mono=True)
-    return s
+def wrap(value, typeface, width):
+    lines = []
+    line = ''
+    for word in value.split():
+        candidate = f'{line} {word}'.strip()
+        if typeface.getlength(candidate)>width and line:
+            lines.append(line)
+            line=word
+        else:
+            line=candidate
+    if line:
+        lines.append(line)
+    return lines
 
 
-PROJECTS = [
-    dict(slug="sfp", num="01", label="INDEPENDENT RESEARCH", color=CYAN,
-         title="Subspace Feature Preservation", mobile=["Subspace Feature", "Preservation"],
-         desc="Preserve critical features. Reduce catastrophic forgetting.",
-         stack="PYTORCH / PCA / CONTINUAL LEARNING / LEAN 4",
-         metrics=[("0.933", "PCA drift R²"), ("0.699", "harmonic score")],
-         note="Qwen2.5-1.5B · rank 32 · conditional bound · scale-dependent findings"),
-    dict(slug="translator", num="02", label="SPEECH AI / REAL-TIME SYSTEMS", color=PINK,
-         title="Real-Time Voice Translator", mobile=["Real-Time Voice", "Translator"],
-         desc="Speak. Translate. Hear. A bidirectional speech pipeline.",
-         stack="WHISPER / GPT-OSS 20B / ELEVENLABS / NEXT.JS / FASTAPI",
-         metrics=[("7", "languages"), ("20 ms", "audio frames")],
-         note="WebSockets · AudioWorklet · p50/p95 telemetry · 27 backend tests"),
-    dict(slug="qlora", num="03", label="POST-TRAINING / CONTROLLED EVALUATION", color=LIME,
-         title="Qwen2.5 · QLoRA Fine-Tuning", mobile=["Qwen2.5 · QLoRA", "Fine-Tuning"],
-         desc="Small-model adaptation, measured beyond the average.",
-         stack="QWEN2.5-1.5B / 4-BIT NF4 / RANK-16 / PEFT / TRL",
-         metrics=[("+30.42%", "relative ROUGE-L"), ("161", "held-out tasks")],
-         note="1,286 training examples · 48 topics · 14.2% of held-out tasks regressed"),
-    dict(slug="nexus", num="04", label="AGENTIC AI / ENTERPRISE SYSTEMS", color=CYAN,
-         title="NexusAgent", mobile=["NexusAgent"],
-         desc="Evidence-grounded decisions. Guarded tools. Hybrid retrieval.",
-         stack="LANGGRAPH / MILVUS / BM25 / BGE / MCP / SQLGLOT",
-         metrics=[("96.25%", "retrieval Hit@1"), ("28/28", "security cases")],
-         note="160 answerable synthetic queries · 1,941 unit + 323 offline integration tests"),
-    dict(slug="coscientist", num="05", label="AI FOR SCIENCE / PROJECT NOVA", color=PINK,
-         title="Autonomous AI Co-Scientist", mobile=["Autonomous AI", "Co-Scientist"],
-         desc="From literature to hypotheses, critique and iterative refinement.",
-         stack="LANGGRAPH / CORRECTIVE RAG / VECTOR MEMORY / DOCKER",
-         metrics=[("Elo", "hypothesis ranking"), ("CRAG", "evidence retrieval")],
-         note="Literature → generate → reflect → rank → evolve → research report"),
+def save_animation(stem, frames, duration=100, static_index=0):
+    outside=Image.new('L',frames[0].size,255)
+    ImageDraw.Draw(outside).rounded_rectangle((0,0,frames[0].width-1,frames[0].height-1),radius=18,fill=0)
+    still=frames[static_index].convert('RGBA')
+    still.putalpha(outside.point(lambda x:255-x))
+    still.save(OUT/f'{stem}.png',optimize=True)
+    # A shared palette avoids flicker. Include multiple phases in the palette.
+    sample=Image.new('RGB',(frames[0].width,frames[0].height*3))
+    for i,n in enumerate([0,len(frames)//3,2*len(frames)//3]):
+        sample.paste(frames[n],(0,frames[0].height*i))
+    palette=sample.quantize(colors=192,method=Image.Quantize.MEDIANCUT)
+    indexed=[f.quantize(palette=palette,dither=Image.Dither.NONE) for f in frames]
+    for im in indexed:
+        im.paste(255,(0,0),outside)
+    indexed[0].save(OUT/f'{stem}.gif',save_all=True,append_images=indexed[1:],
+                    duration=duration,loop=0,optimize=True,disposal=1,transparency=255,background=255)
+    print(f'{stem}: {(OUT/f"{stem}.gif").stat().st_size//1024} KiB')
+
+
+def hero(mobile=False):
+    w,h=(600,450) if mobile else (1100,340)
+    base=backdrop(w,h,'#17223e','#302146','#8f8cff')
+    # Rich blue, violet and teal shading replaces the previous terminal/grid motif.
+    glow=Image.new('RGBA',(w,h))
+    gd=ImageDraw.Draw(glow)
+    gd.ellipse((-w*.3,h*.6,w*.6,h*1.7),fill=(35,197,198,45))
+    gd.ellipse((w*.6,-h,w*1.5,h*.4),fill=(227,136,213,40))
+    base=Image.alpha_composite(base.convert('RGBA'),glow.filter(ImageFilter.GaussianBlur(90))).convert('RGB')
+    d=ImageDraw.Draw(base)
+    x=32 if mobile else 42
+    d.rounded_rectangle((x,26,x+184,61),radius=17,fill='#41416d')
+    d.text((x+16,33),'IIT KHARAGPUR',font=font(17,True),fill='#ece9ff')
+    if not mobile:
+        d.text((w-349,35),'RESEARCH  /  BUILD  /  OPTIMIZE',font=font(16),fill=MUTED)
+    y_role=236 if mobile else 169
+    y_type=286 if mobile else 220
+    d.text((x,y_role),'AI Research & Engineering',font=font(28 if mobile else 30,True),fill=WHITE)
+    tagline='Understanding models. Building useful systems.'
+    for i,t in enumerate(wrap(tagline,font(22 if mobile else 21),w-x*2)):
+        d.text((x,(357 if mobile else 283)+i*30),t,font=font(22 if mobile else 21),fill=MUTED)
+    roles=[('Continual learning & model adaptation','#b6b0ff'),
+           ('Speech AI & evidence-grounded agents','#ffbdac'),
+           ('Software systems & cloud infrastructure','#94d4ff'),
+           ('GPU programming: CUDA & Triton','#85e6ce')]
+    frames=[]
+    for n in range(100):
+        im=base.copy()
+        phase=n/100
+        if mobile:
+            gradient_text(im,(x,80),'Aayaann',font(60,True),('#ffffff','#b8ceff'),phase)
+            gradient_text(im,(x,148),'Kausar',font(60,True),('#d8c5ff','#a4e4ef'),phase)
+        else:
+            gradient_text(im,(x,80),'Aayaann Kausar',font(68,True),('#ffffff','#bad0ff'),phase)
+        d=ImageDraw.Draw(im)
+        index=(n+18)//25%4
+        step=(n+18)%25
+        phrase,color=roles[index]
+        count=min(len(phrase),max(1,round((step+1)/17*len(phrase))))
+        typed=phrase[:count]
+        face=font(22 if mobile else 25)
+        d.text((x,y_type),typed,font=face,fill=color)
+        if n%8<5:
+            cursor=x+face.getlength(typed)+4
+            d.line((cursor,y_type+5,cursor,y_type+face.size+5),fill=color,width=2)
+        # A restrained animated colour rail, away from the readable content.
+        for px in range(w):
+            color=blend(rgb('#7899ff'),rgb('#e49bcf'),.5+.5*sin(px/w*pi*2-phase*pi*2))
+            d.line((px,h-4,px,h),fill=color)
+        frames.append(im)
+    save_animation('hero-mobile' if mobile else 'hero',frames,150)
+
+
+PROJECTS=[
+ dict(slug='sfp',label='01  /  INDEPENDENT RESEARCH',title='Subspace Feature Preservation',
+      mobile=['Subspace Feature','Preservation'],strap='Reducing forgetting through feature preservation',
+      stack='PyTorch · PCA · Continual learning · Lean 4',
+      primary=('0.933','drift prediction R²'),secondary=('0.699','harmonic score'),
+      accent='#b8b0ff',second='#8bcaff',left='#211e3b',right='#182e43'),
+ dict(slug='translator',label='02  /  SPEECH AI & REAL-TIME SYSTEMS',title='Real-Time Voice Translator',
+      mobile=['Real-Time Voice','Translator'],strap='A streaming, bidirectional speech-to-speech pipeline',
+      stack='Whisper · GPT-OSS 20B · ElevenLabs · FastAPI',
+      primary=('7','languages, both directions'),secondary=('20 ms','audio frames'),
+      accent='#ffc399',second='#f6a1c4',left='#382333',right='#30253f'),
+ dict(slug='qlora',label='03  /  MODEL ADAPTATION & EVALUATION',title='Qwen2.5 · QLoRA Fine-Tuning',
+      mobile=['Qwen2.5 · QLoRA','Fine-Tuning'],strap='Efficient fine-tuning with controlled evaluation',
+      stack='4-bit NF4 · Rank-16 adapters · PEFT · TRL',
+      primary=('+30.42%','relative ROUGE-L gain'),secondary=('161','held-out tasks'),
+      accent='#8be8cb',second='#91cfff',left='#123735',right='#203347'),
+ dict(slug='nexus',label='04  /  AGENTIC AI & ENTERPRISE SYSTEMS',title='NexusAgent',
+      mobile=['NexusAgent'],strap='Hybrid retrieval and guarded tools for decision support',
+      stack='LangGraph · Milvus · BGE · MCP · SQLGlot',
+      primary=('96.25%','retrieval Hit@1'),secondary=('28/28','security cases'),
+      accent='#a1cfff',second='#c5b0ff',left='#1b2e4c',right='#2e2948'),
+ dict(slug='coscientist',label='05  /  AI FOR SCIENCE · PROJECT NOVA',title='Autonomous AI Co-Scientist',
+      mobile=['Autonomous AI','Co-Scientist'],strap='A multi-agent workflow for scientific exploration',
+      stack='LangGraph · Corrective RAG · Vector memory',
+      primary=('Elo','hypothesis tournaments'),secondary=('CRAG','evidence retrieval'),
+      accent='#f2b3df',second='#bdb3ff',left='#352541',right='#242d49'),
 ]
 
 
-def projects():
-    for p in PROJECTS:
-        c = p["color"]
-        s = line(1, 18, 1, 252, c, 3)
-        s += text(32, 37, f'{p["num"]} / {p["label"]}', 14, c, mono=True)
-        s += text(1165, 39, "↗", 25, c, extra='text-anchor="end"')
-        s += text(32, 88, p["title"], 31, WHITE, 700)
-        s += text(32, 124, p["desc"], 18, MUTED)
-        s += text(32, 165, p["stack"], 15, c, mono=True)
-        s += line(32, 194, 1168, 194)
-        s += text(32, 233, p["note"], 15, MUTED)
-        s += line(718, 60, 718, 169)
-        for i,(value,label) in enumerate(p["metrics"]):
-            px = 753+i*225
-            s += text(px, 104, value, 34, c, 700)
-            s += text(px, 139, label, 16, MUTED)
-        write(p["slug"],1200,260,s,p["title"])
-        s = line(1, 20, 1, 445, c, 3)
-        s += text(27, 38, f'{p["num"]} / {p["label"]}', 12, c, mono=True)
-        for i,t in enumerate(p["mobile"]):
-            s += text(27,91+i*39,t,30,WHITE,700)
-        s += icon(p["slug"],393,54,c)
-        for i,(value,label) in enumerate(p["metrics"]):
-            px = 27+i*290
-            s += text(px,222,value,39,c,700)
-            s += text(px,253,label,17,MUTED)
-        s += line(27,280,573,280)
-        for i,t in enumerate(textwrap.wrap(p["stack"],53)):
-            s += text(27,313+i*22,t,13,c,mono=True)
-        for i,t in enumerate(textwrap.wrap(p["note"],59)):
-            s += text(27,379+i*24,t,16,MUTED)
-        s += text(572,441,"EXPLORE ↗",12,c,mono=True,extra='text-anchor="end"')
-        write(p["slug"]+"-mobile",600,464,s,p["title"])
+def project_card(p,mobile=False):
+    w,h=(600,370) if mobile else (1100,236)
+    x=28 if mobile else 32
+    base=backdrop(w,h,p['left'],p['right'],p['accent'])
+    d=ImageDraw.Draw(base)
+    d.text((x,22),p['label'],font=font(16,True),fill=p['accent'])
+    title_face=font(34,True)
+    title_lines=p['mobile'] if mobile else [p['title']]
+    for i,value in enumerate(title_lines):
+        if title_face.getlength(value)> (544 if mobile else 708):
+            raise ValueError(f'Title too wide: {value}')
+    if mobile:
+        metrics_y=188
+        d.line((x,metrics_y-14,w-x,metrics_y-14),fill='#656781',width=1)
+        d.text((x,metrics_y),p['primary'][0],font=font(43,True),fill=p['accent'])
+        d.text((x,metrics_y+57),p['primary'][1],font=font(20),fill=MUTED)
+        d.text((340,metrics_y+8),p['secondary'][0],font=font(31,True),fill=p['second'])
+        # Secondary labels wrap instead of shrinking.
+        for i,t in enumerate(wrap(p['secondary'][1],font(20),225)):
+            d.text((340,metrics_y+57+i*25),t,font=font(20),fill=MUTED)
+        for i,t in enumerate(wrap(p['stack'],font(21),w-2*x)):
+            d.text((x,307+i*27),t,font=font(21),fill=WHITE)
+    else:
+        d.text((x,122),p['strap'],font=font(21),fill=MUTED)
+        d.text((x,177),p['stack'],font=font(20),fill=WHITE)
+        d.rounded_rectangle((761,56,1072,207),radius=15,fill='#111a2b')
+        d.text((785,69),p['primary'][0],font=font(44,True),fill=p['accent'])
+        d.text((785,126),p['primary'][1],font=font(19),fill=MUTED)
+        detail=p['secondary'][0]+' · '+p['secondary'][1]
+        d.text((785,174),detail,font=font(18),fill=p['second'])
+    frames=[]
+    for n in range(40):
+        im=base.copy()
+        phase=n/40
+        for i,value in enumerate(title_lines):
+            gradient_text(im,(x,60+i*43),value,title_face,('#ffffff',p['accent']),phase)
+        d=ImageDraw.Draw(im)
+        d.line((x,h-15,w-x,h-15),fill=p['left'],width=2)
+        # A soft glint travels under the card, with all numerical results fixed.
+        pos=x+phase*(w-2*x)
+        for offset in range(-38,39):
+            px=round(pos+offset)
+            if x<=px<=w-x:
+                c=blend(rgb(p['left']),rgb(p['accent']),(1-abs(offset)/39)*.8)
+                d.line((px,h-15,px,h-14),fill=c)
+        frames.append(im)
+    stem=p['slug']+('-mobile' if mobile else '')
+    save_animation(stem,frames,120)
+
+
+def svg_text(x,y,value,size=22,color=WHITE,bold=False):
+    return f'<text x="{x}" y="{y}" font-family="DejaVu Sans,Arial,sans-serif" font-size="{size}" font-weight="{700 if bold else 400}" fill="{color}">{escape(value)}</text>'
+
+
+def write_svg(name,w,h,content,title):
+    (OUT/f'{name}.svg').write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img"><title>{escape(title)}</title>{content}</svg>\n')
 
 
 def focus():
-    groups=[("01 / MODEL RESEARCH", ["Continual learning · QLoRA", "PyTorch · Transformers · Lean 4"],CYAN),
-            ("02 / AI ENGINEERING", ["Speech AI · RAG · LangGraph", "FastAPI · Next.js · WebSockets"],PINK),
-            ("03 / SOFTWARE & CLOUD", ["AWS · GCP · Docker · Kubernetes", "Terraform · CI/CD · Observability"],CYAN),
-            ("04 / DEEPENING", ["CUDA · Triton · C++", "GPU kernels · LLM serving"],LIME)]
+    groups=[('AI research',['Continual learning · QLoRA','PyTorch · Transformers · Lean 4'],'#b8b0ff','#26223d'),
+            ('AI engineering',['Speech AI · RAG · LangGraph','FastAPI · Next.js · WebSockets'],'#ffc399','#332536'),
+            ('Software & cloud',['AWS · GCP · Docker · Kubernetes','Terraform · CI/CD · Observability'],'#a1cfff','#1c3047'),
+            ('GPU & AI infrastructure',['Exploring CUDA · Triton · C++','GPU kernels · LLM serving'],'#8be8cb','#193731')]
     for mobile in (False,True):
-        w,h = (600,335) if mobile else (1200,142)
-        s = ""
-        for i,(label,items,c) in enumerate(groups):
-            x = 27+(i%2)*290 if mobile else 28+i*297
-            y = 38+(i//2)*156 if mobile else 37
-            s += line(x,y-14,x+20,y-14,c,2)
-            s += text(x,y+10,label,13,c,mono=True)
-            for j,v in enumerate(items):
-                s += text(x,y+43+j*25,v,16,MUTED)
-        write("focus-mobile" if mobile else "focus",w,h,s,"Research, AI engineering, software and cloud; deepening GPU systems")
+        w,h=(600,568) if mobile else (1100,288)
+        s=''
+        for i,(label,items,color,bg) in enumerate(groups):
+            x=0 if mobile else (i%2)*560
+            y=i*142 if mobile else (i//2)*144
+            cw=600 if mobile else 540
+            s+=f'<rect x="{x}" y="{y}" width="{cw}" height="130" rx="14" fill="{bg}"/>'
+            s+=f'<rect x="{x+22}" y="{y+25}" width="4" height="77" rx="2" fill="{color}"/>'
+            s+=svg_text(x+43,y+43,label,24,color,True)
+            for j,t in enumerate(items):
+                s+=svg_text(x+43,y+76+j*27,t,22,MUTED)
+        write_svg('focus-mobile' if mobile else 'focus',w,h,s,'Research, AI engineering, software and cloud, GPU infrastructure')
 
 
 def competition():
     for mobile in (False,True):
-        w,h = (600,325) if mobile else (1200,202)
-        s = line(1,18,1,h-18,LIME,3)
-        s += text(28,37,"WUNDER FUND / FORECASTING CHALLENGE / 2025",12,LIME,mono=True)
-        s += text(28,85,"HFT Market State Forecasting",26 if mobile else 30,WHITE,700)
-        s += text(28,135,"9th",44,LIME,700)
-        s += text(135,133,"/ 5,000+ competitors",19,MUTED)
+        w,h=(600,350) if mobile else (1100,218)
+        s=f'<defs><linearGradient id="bg"><stop stop-color="#30324b"/><stop offset="1" stop-color="#3e2c3e"/></linearGradient></defs><rect width="{w}" height="{h}" rx="16" fill="url(#bg)"/>'
+        s+=svg_text(28,36,'WUNDER FUND · FORECASTING CHALLENGE',16,'#ffd2a5',True)
         if mobile:
-            s += line(28,163,572,163)
-            s += text(28,204,"0.3920",29,WHITE,700)
-            s += text(204,203,"final R²",15,MUTED)
-            s += text(28,247,"4-layer / 8-head Transformer",17,MUTED)
-            s += text(28,280,"torch.compile · Numba · CPU inference",14,LIME)
+            s+=svg_text(28,87,'HFT Market State',30,WHITE,True)
+            s+=svg_text(28,126,'Forecasting',30,WHITE,True)
+            s+=svg_text(28,204,'9th',49,'#ffd2a5',True)
+            s+=svg_text(146,201,'of 5,000+ competitors',22,MUTED)
+            s+=svg_text(28,257,'0.3920',32,WHITE,True)
+            s+=svg_text(205,254,'final R²',22,MUTED)
+            s+=svg_text(28,310,'Transformer · torch.compile · Numba',21,MUTED)
         else:
-            s += line(750,67,750,142)
-            s += text(787,101,"0.3920",34,LIME,700)
-            s += text(787,132,"final R²",14,MUTED)
-            s += text(28,177,"4-layer / 8-head Transformer · torch.compile · Numba · optimized CPU inference",14,MUTED)
-        write("competition-mobile" if mobile else "competition",w,h,s,"Wunder Fund forecasting challenge — 9th of 5,000+")
-    s = line(28,19,1172,19)
-    s += text(28,59,"RESEARCH THE MODEL. ENGINEER THE SYSTEM.",20,WHITE,700)
-    s += text(1172,59,"AK / 28",13,CYAN,mono=True,extra='text-anchor="end"')
-    write("footer",1200,85,s,"Research the model. Engineer the system.")
-    s = line(28,14,572,14)
-    s += text(28,50,"RESEARCH THE MODEL.",24,WHITE,700)
-    s += text(28,85,"ENGINEER THE SYSTEM.",24,WHITE,700)
-    s += text(572,85,"AK/28",12,CYAN,mono=True,extra='text-anchor="end"')
-    write("footer-mobile",600,111,s,"Research the model. Engineer the system.")
-
-
-def font(size, bold=False, mono=False):
-    name = "DejaVuSansMono" if mono else "DejaVuSans"
-    return ImageFont.truetype(str(FONT_DIR / (name+("-Bold" if bold else "")+".ttf")),size)
-
-
-def mesh(d,cx,cy,r,t):
-    def project(lat,lon):
-        a = lon+t*2*pi
-        x,y,z = cos(lat)*cos(a),sin(lat),cos(lat)*sin(a)
-        yy,zz = y*cos(.32)-z*sin(.32),y*sin(.32)+z*cos(.32)
-        scale = 1+.12*zz
-        return cx+r*x*scale,cy+r*yy*scale,zz
-    for j in range(1,12):
-        lat = -pi/2+j*pi/12
-        pts = [project(lat,k*2*pi/64) for k in range(65)]
-        for a,b in zip(pts,pts[1:]):
-            c = (30,77,96) if (a[2]+b[2])/2<0 else (58,144,163)
-            d.line([a[:2],b[:2]],fill=c,width=1)
-    for k in range(18):
-        pts = [project(-pi/2+j*pi/48,k*2*pi/18) for j in range(49)]
-        for a,b in zip(pts,pts[1:]):
-            c = (28,65,88) if (a[2]+b[2])/2<0 else (83,181,198)
-            d.line([a[:2],b[:2]],fill=c,width=1)
-        for j in range(3,12,3):
-            x,y,z = project(-pi/2+j*pi/12,k*2*pi/18)
-            if z>0:
-                d.ellipse((x-2,y-2,x+2,y+2),fill=CYAN)
-    d.ellipse((cx-r-18,cy-r-18,cx+r+18,cy+r+18),outline=(34,47,73),width=1)
-    angle = t*360
-    d.arc((cx-r-18,cy-r-18,cx+r+18,cy+r+18),angle,angle+64,fill=PINK,width=3)
-    d.arc((cx-r-27,cy-r-27,cx+r+27,cy+r+27),-angle+180,-angle+210,fill=LIME,width=2)
-
-
-def hero(mobile=False):
-    w,h = (600,650) if mobile else (1200,410)
-    base = Image.new("RGB",(w,h),BG)
-    d = ImageDraw.Draw(base)
-    for x in range(24,w,24):
-        for y in range(18,h,24):
-            d.point((x,y),fill=(29,40,58))
-    floor = 535 if mobile else 288
-    for x in range(-w,w*2,100):
-        d.line((w*.78,floor,x,h),fill=(17,36,51))
-    for i in range(6):
-        y = floor+(h-floor)*(i/5)**2
-        d.line((0,y,w,y),fill=(17,36,51))
-    d.line((28,65,w-28,65),fill=LINE)
-    d.rectangle((28,27,89,48),fill=CYAN)
-    d.text((34,29),"AK/28",font=font(14,True,True),fill=BG)
-    d.text((106,30),"RESEARCH TERMINAL",font=font(12,mono=True),fill=MUTED)
-    d.text((w-43,29),"+",font=font(18),fill=PINK)
-    left = 28 if mobile else 43
-    d.text((left,88),"AI RESEARCH / ENGINEERING",font=font(15,mono=True),fill=CYAN)
-    d.text((left,118),"AAYAANN",font=font(64 if mobile else 72,True),fill=WHITE)
-    d.text((left,188 if mobile else 196),"KAUSAR",font=font(64 if mobile else 72,True),fill=WHITE)
-    d.text((left,276 if mobile else 294),"MODELS. SYSTEMS. METAL.",font=font(18,True,True),fill=LIME)
-    foot = h-49
-    d.line((28,foot-15,w-28,foot-15),fill=LINE)
-    d.text((left,foot),"IIT KHARAGPUR / INDIA",font=font(12,mono=True),fill=MUTED)
-    if not mobile:
-        d.text((w-307,foot),"CUDA / TRITON / CLOUD",font=font(12,mono=True),fill=CYAN)
-    frames = []
-    for n in range(60):
-        im = base.copy()
-        d = ImageDraw.Draw(im)
-        t = n/60
-        cx,cy,r = (410,453,99) if mobile else (961,203,110)
-        mesh(d,cx,cy,r,t)
-        for i in range(3):
-            yy = cy-73+i*75
-            d.line((cx-r-47,yy,cx-r-24,yy,cx-r-24,yy+20),fill=(58,76,102),width=1)
-        scan = int(t*r*2)
-        d.line((cx-r-9,cy-r+scan,cx+r+9,cy-r+scan),fill=(43,80,98),width=1)
+            s+=svg_text(28,87,'HFT Market State Forecasting',34,WHITE,True)
+            s+=svg_text(28,151,'9th',48,'#ffd2a5',True)
+            s+=svg_text(139,147,'of 5,000+ competitors',24,MUTED)
+            s+=svg_text(823,101,'0.3920',43,'#ffd2a5',True)
+            s+=svg_text(823,138,'final R²',22,MUTED)
+            s+=svg_text(28,192,'4-layer, 8-head Transformer · torch.compile · Numba · CPU inference',21,MUTED)
+        write_svg('competition-mobile' if mobile else 'competition',w,h,s,'Wunder Fund — 9th of 5,000+ competitors')
+    for mobile in (False,True):
+        w,h=(600,124) if mobile else (1100,95)
+        s=f'<defs><linearGradient id="f"><stop stop-color="#a4b9ff"/><stop offset=".5" stop-color="#ebbcdf"/><stop offset="1" stop-color="#8fe4d0"/></linearGradient></defs><rect width="{w}" height="{h}" rx="15" fill="#20263d"/>'
         if mobile:
-            for i,(label,c) in enumerate(zip(["RESEARCH","TRAIN","SHIP","OPTIMIZE"],[CYAN,PINK,CYAN,LIME])):
-                d.text((28,399+i*29),label,font=font(13,mono=True),fill=c)
+            s+=svg_text(28,48,'Curious about models.',27,'url(#f)',True)
+            s+=svg_text(28,89,'Serious about systems.',27,'url(#f)',True)
         else:
-            d.text((780,44),"NEURAL FIELD / GENERATIVE GEOMETRY",font=font(11,mono=True),fill=MUTED)
-        frames.append(im)
-    stem = "hero-mobile" if mobile else "hero"
-    frames[0].save(OUT/f"{stem}.png",optimize=True)
-    palette = frames[0].quantize(colors=96,method=Image.Quantize.MEDIANCUT)
-    indexed = [f.quantize(palette=palette,dither=Image.Dither.NONE) for f in frames]
-    indexed[0].save(OUT/f"{stem}.gif",save_all=True,append_images=indexed[1:],duration=100,loop=0,optimize=True,disposal=1)
-    print(f"Built {stem}.gif ({(OUT/f'{stem}.gif').stat().st_size // 1024} KiB)")
+            s+=svg_text(32,58,'Curious about models. Serious about systems.',30,'url(#f)',True)
+        write_svg('footer-mobile' if mobile else 'footer',w,h,s,'Curious about models. Serious about systems.')
 
 
-if __name__ == "__main__":
-    projects()
-    focus()
-    competition()
+if __name__=='__main__':
     hero()
     hero(mobile=True)
+    for p in PROJECTS:
+        project_card(p)
+        project_card(p,mobile=True)
+    focus()
+    competition()
