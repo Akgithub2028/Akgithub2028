@@ -1,14 +1,22 @@
 # Profile maintenance
 
-The profile uses native GitHub Markdown for headings, project descriptions,
-technology labels, links, and the technical-focus table. Content inherits
-GitHub's typography and light/dark theme, wraps on mobile, and remains selectable.
+The profile combines a responsive SVG masthead with native GitHub text and HTML
+project panels. The illustration has a dedicated centred position beneath the
+masthead at 190 × 190, followed by the introduction, contact links, profile counter,
+and Pac-Man contribution animation. There are no floating illustrations or
+multi-column project panels to compress the text on mobile.
+
+`python3 scripts/build_identity.py` regenerates four self-contained masthead SVGs:
+desktop/mobile, each with dark/light variants. A `<picture>` selects the correct
+variant. The typographic gradient is static; a narrow accent line has a slow CSS
+animation disabled for reduced-motion preferences. Assets contain no scripts,
+external fonts, or external image dependencies.
+
 The supplied coding illustration is preserved as the original animated WebP
-in the introduction (20 frames, looping). The clipboard PNG is its reduced-motion
-fallback. Both are displayed at 150 × 150; neither source image was edited.
-Small local SVG labels provide muted category colours; project text remains native
-Markdown. Bold text marks methods/results, while monospace identifies selected
-APIs and frameworks. There are no generated hero banners or animated project cards.
+(20 frames, looping). The clipboard PNG is its reduced-motion fallback. Neither
+source image was edited. Local coloured SVG category labels, bold result summaries,
+monospace technology labels, and direct project links establish the content hierarchy.
+Project descriptions remain selectable and inherit GitHub's light/dark theme.
 
 Featured work is limited to SFP, Real-Time Voice Translator, Qwen QLoRA,
 NexusAgent, Autonomous AI Co-Scientist, and the Wunder Fund forecasting competition.
@@ -27,7 +35,13 @@ needed. A failed API request leaves the last generated image intact. Dates are
 UTC. Contributions follow GitHub's visibility rules and include more than commits.
 
 The Komarev counter retains the original `Akgithub2028` username, preserving its
-counter identity. Only its appearance has changed to a compact, muted badge.
+counter identity. Only its appearance has changed to a compact violet badge.
 The service counts image requests under Komarev/GitHub caching behaviour, not
 distinct people. Preview tools should substitute a placeholder for this image
 to avoid adding preview requests to the counter.
+
+Before publishing, render the README through GitHub's Markdown API and check desktop,
+mobile, light, and reduced-motion layouts. Confirm local assets load, content fits
+without horizontal scrolling, and reduced-motion sources select the still images.
+Check the live profile after publishing because GitHub's HTML sanitization and asset
+URLs can differ from a local Markdown renderer.
